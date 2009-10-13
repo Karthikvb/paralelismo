@@ -1,0 +1,18 @@
+
+
+                                                BENCHMARK de acceso a memoria
+
+        Programa para verificar los tiempos de acceso a las distintas memorias de una máquina ( L1 cache, L2 cache ( si tuviese) y memoria principal.
+
+El objetivo es calcular el tiempo de lectura y escritura de diferentes posiciones de un array separadas en tramos de longitud variable,
+para cada tamaño de array y para cada distancia entre posiciones se debe registra el caĺculo de tiempos y reflejar los resultados en una gráfica
+
+El algoritmo consiste en incrementar en uno valores del array y posteriormente restarle a ese tiempo el mismo nº de incrementos en uno de variables de tipo registro.
+
+De esta manera se puede observar en las gráficas el tiempo mínimo como el tiempo de acceso a cache que será aquel para caches de tamaño inferior a la cache del ordenador, el tiempo mínimo para caches superiores a L1 a partir de tramos superiores al tamaño de la línea de cache será el tiempo de acceso a L2 y el  tiempos para tamaños mayores de L2 para tramos superiores al tamaño de la linea de cache de L2 será el tiempo de acceso a memoria.
+
+Observando en dichas gráficas el primer incremento significativo de tiempo para tamaño superior a L1 cache indicará el tamaño de tramo igual al tamaño de linea L1 cache, el 2º incremento significativo para tamaño superior a L2 cache indicará el amaño de tramo igual al tamaño de linea L2 cache.
+
+
+
+                               
