@@ -1,4 +1,5 @@
-//Membench para medir los tiempos de accesos a memoria
+//Benchmark que mide el tiempo de acceso a varias posiciones de memoria conscutivas y la realización
+//de operaciones aritméticas entre ellas
 
 #include <stdio.h>
 #include <time.h>
@@ -31,7 +32,7 @@ int main()
 		clock_gettime(CLOCK_REALTIME,&start);
 		for (i = SAMPLE*stride; i != 0; i--)
 		    for (index = 0; index < limit; index += stride)
-			x[index]++;
+			x[index]=x[index]*x[index+1]+x[index+2];
 		clock_gettime(CLOCK_REALTIME,&finish);
 		sample_ns = TIME_DIF_TO_NS(start,finish);
 		sample_sec = sample_ns/1000000000.0;
@@ -61,4 +62,5 @@ int main()
     }
     return 0;
 }
+
 
