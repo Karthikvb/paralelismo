@@ -9,9 +9,10 @@ L1 Cache	128.0 Kb
 L2 Cache	2048.0 Kb
 
 Tf-> Tiempo por operación aritmética = 0.5 ns
-Tm -> Tiempo mínimo de acceso a memoria principal = 30 ns ( 60 ns entre 2 accesos)
 Tiempo de acceso a L1 cache 1 ns ( 2 ciclos)
 Tiempo de acceso a L2 cache 6 ns ( 12 ciclos )
 Tamaño de línea cache L1 -> 16 bytes
 Tamaño de línea cache L2 -> 64 bytes
+Tm -> Tiempo mínimo de acceso a memoria principal/nº de palabras por línea de cache = 30 ns ( 60 ns entre 2 accesos)/2=15 ns
+Tm/tf=30
 
