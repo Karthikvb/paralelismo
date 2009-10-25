@@ -1,0 +1,4 @@
+Software que realiza el calculo del cociente tm/tf de una máquina
+y después genera el código para realizar los benchmarks de producto de matrices
+naive, blocked, naive-omp, blocked-omp optimizado para el tamaño de bloqeu obtenido previamente
+Ejecutando el comando make se generan los ejecutables para los diversos benchmarks
