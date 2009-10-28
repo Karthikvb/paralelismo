@@ -9,15 +9,6 @@ int main(int argc, char* argv[])
     fill(&A,n);
     fill(&B,n);
     fill(&C,n);
-
-    square_dgemm (n,A.datos,B.datos,C.datos);
-    tiempo=read_timer();
-    for (int j=0;j<1;j++)
-    {
-        square_dgemm (n,A.datos,B.datos,C.datos);
-    }
-    tiempo=read_timer()-tiempo;
-    printf ("La prueba del benchmar naive básico ha tardado %lf segundos\n",tiempo);
     start_clock();
     for (int j=0;j<1;j++)
     {

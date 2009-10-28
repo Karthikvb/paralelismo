@@ -42,21 +42,18 @@ int naive_multiplymatrix( matrix * A,matrix * B, matrix * C)
   int ncolumnasb=B->ncolumnas;
   int nfilasc=C->nfilas;
   int ncolumnasc=C->ncolumnas;
-  double * datosa=A->datos;
-  double * datosb=B->datos;
-  double * datosc=C->datos;
-  /*if (ncolumnasa!=nfilasb || ncolumnasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  if (ncolumnasa!=nfilasb || ncolumnasa!=nfilasc || ncolumnasb!=ncolumnasc)
   {
         printf("Tamaños de matrices incompatibles para el producto\n");
         return 1;
-  } */    
+  }  
   for( int i = 0; i < nfilasa; i++ )
        for( int j = 0; j < ncolumnasb; j++ ) 
        {
-            double cij = datosc[i+j*ncolumnasb];
+            double cij = C->datos[i+j*ncolumnasb];
             for( int k = 0; k < ncolumnasa; k++ )
-                 cij += datosa[i+k*ncolumnasa] * datosb[k+j*nfilasb];
-            datosc[i+j*ncolumnasb] = cij;
+                 cij += A->datos[i+k*ncolumnasa] * B->datos[k+j*nfilasb];
+            C->datos[i+j*ncolumnasb] = cij;
        }
   return 0;
 }
