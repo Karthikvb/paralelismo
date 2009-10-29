@@ -14,6 +14,7 @@ typedef struct{
 void start_clock();
 double end_clock();
 void fill (matrix *,int );
+void fill (matrix *,int ,int);
 int naive_multiplymatrix( matrix *,matrix *, matrix *);
 int naive_multiplymatrix_openmp( matrix *,matrix * B, matrix * C);
 int blocked_multiplymatrix(matrix *,matrix * , matrix *);
