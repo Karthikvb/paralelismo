@@ -1,7 +1,7 @@
 
 CC= g++
 LIBS = 	-fopenmp 
-CFLAGS = -O3 
+CFLAGS = -O3 -fopenmp
 PROG := membench
 
 all: matrix_booster.a prueba
