@@ -42,18 +42,18 @@ int naive_multiplymatrix( matrix * A,matrix * B, matrix * C)
   int ncolumnasb=B->ncolumnas;
   int nfilasc=C->nfilas;
   int ncolumnasc=C->ncolumnas;
-  if (ncolumnasa!=nfilasb || ncolumnasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
   {
-        printf("Tamaños de matrices incompatibles para el producto\n");
+        printf("Tamaños de matrices incompatibles para el producto naive\n");
         return 1;
   }  
   for( int i = 0; i < nfilasa; i++ )
        for( int j = 0; j < ncolumnasb; j++ ) 
        {
-            double cij = C->datos[i+j*ncolumnasb];
+            double cij = C->datos[i*ncolumnasb+j];
             for( int k = 0; k < ncolumnasa; k++ )
-                 cij += A->datos[i+k*ncolumnasa] * B->datos[k+j*nfilasb];
-            C->datos[i+j*ncolumnasb] = cij;
+                 cij += A->datos[i*ncolumnasa+k] * B->datos[k*ncolumnasb+j];
+            C->datos[i*ncolumnasb+j] = cij;
        }
   return 0;
 }
@@ -67,9 +67,9 @@ int naive_multiplymatrix_openmp( matrix * A,matrix * B, matrix * C)
   int ncolumnasb=B->ncolumnas;
   int nfilasc=C->nfilas;
   int ncolumnasc=C->ncolumnas;
-  if (ncolumnasa!=nfilasb || ncolumnasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
   {
-        printf("Tamaños de matrices incompatibles para el producto\n");
+        printf("Tamaños de matrices incompatibles para el producto naive omp\n");
         return 1;
   }  
   #pragma omp parallel
@@ -79,23 +79,23 @@ int naive_multiplymatrix_openmp( matrix * A,matrix * B, matrix * C)
        #pragma omp parallel for 
        for( int j = 0; j < ncolumnasb; j++ ) 
        {
-            double cij = C->datos[i+j*ncolumnasb];
+            double cij = C->datos[i*ncolumnasb+j];
             for( int k = 0; k < ncolumnasa; k++ )
-                 cij += A->datos[i+k*ncolumnasa] * B->datos[k+j*nfilasb];
-            C->datos[i+j*ncolumnasb] = cij;
+                 cij +=  A->datos[i*ncolumnasa+k] * B->datos[k*ncolumnasb+j];
+            C->datos[i*ncolumnasb+j] = cij;
        }
   }
 }
-void basic_dgemm( int nfilasa,int ncolumnasb,int M, int N, int K,
+void basic_dgemm( int nfilasa,int ncolumnasa,int ncolumnasb,int M, int N, int K,
                   double *A, double *B, double *C )
 {
   for( int i = 0; i < M; i++ )
        for( int j = 0; j < N; j++ ) 
        {
-            double cij = C[i+j*ncolumnasb];
+            double cij = C[i*ncolumnasb+j];
             for( int k = 0; k < K; k++ )
-                 cij += A[i+k*nfilasa] * B[k+j*ncolumnasb];
-            C[i+j*ncolumnasb] = cij;
+                 cij += A[i*ncolumnasa+k] * B[k*ncolumnasb+j];
+            C[i*ncolumnasb+j] = cij;
        }
 }
 
@@ -107,7 +107,7 @@ void do_block( int nfilasa, int ncolumnasb,int ncolumnasa, double *A, double *B,
      int N = min( BLOCK_SIZE, ncolumnasb-j );
      int K = min( BLOCK_SIZE, ncolumnasa-k );
 
-     basic_dgemm( nfilasa,ncolumnasb, M, N, K, A + i + k*nfilasa, B + k + j*ncolumnasb, C + i + j*ncolumnasb);
+     basic_dgemm( nfilasa,ncolumnasa,ncolumnasb, M, N, K, A + i*ncolumnasa + k, B + k*ncolumnasb + j, C + i*ncolumnasb + j);
 }
 int blocked_multiplymatrix(matrix * A,matrix * B, matrix * C)
 {
@@ -117,9 +117,9 @@ int blocked_multiplymatrix(matrix * A,matrix * B, matrix * C)
   int ncolumnasb=B->ncolumnas;
   int nfilasc=C->nfilas;
   int ncolumnasc=C->ncolumnas;
-  if (ncolumnasa!=nfilasb || ncolumnasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
   {
-        printf("Tamaños de matrices incompatibles para el producto\n");
+        printf("Tamaños de matrices incompatibles para el producto blocked\n");
         return 1;
   }      
   for( int i = 0; i < nfilasa; i += BLOCK_SIZE )
@@ -135,9 +135,9 @@ int blocked_multiplymatrix_openmp(matrix * A,matrix * B, matrix * C)
   int ncolumnasb=B->ncolumnas;
   int nfilasc=C->nfilas;
   int ncolumnasc=C->ncolumnas;
-  if (ncolumnasa!=nfilasb || ncolumnasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
   {
-        printf("Tamaños de matrices incompatibles para el producto\n");
+        printf("Tamaños de matrices incompatibles para el producto blocked omp\n");
         return 1;
   }  
   #pragma omp parallel
