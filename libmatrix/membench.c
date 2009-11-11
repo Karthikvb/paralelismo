@@ -64,7 +64,7 @@ int main()
            } 
 	}
     }
-    printf("#define BLOCK_SIZE %ld\n/*%lf %lf*/\n ",int(round(timemax/timemin)),timemax,timemin);
+    printf("#define BLOCK_SIZE %ld\n/*%lf %lf*/\n",int(round(timemax/timemin)),timemax,timemin);
     return 0;
 }
 

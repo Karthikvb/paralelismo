@@ -1,66 +1,63 @@
 
-#include "matrix_booster.h"
+#include "matrix_booster.hpp"
+
+
 
 int main(int argc, char* argv[])
 {
-    matrix A,B,C;
-    double tiempo;
-    int m,n,o;
-    switch(argc)
+    int m,n,o,p,q,r;
+    /*switch(argc)
     {
 	case 1:
 		m=1000;
-    		fill(&A,m);
-    		fill(&B,m);
-    		fill(&C,m);
+                n=m;
+                o=m;
+                p=m;
+                q=m;
+                r=m;      
 		break;
 	case 2:
 		m=atoi(argv[1]);
-    		fill(&A,m);
-    		fill(&B,m);
-    		fill(&C,m);
+                n=m;
+                o=m;
+                p=m;
+                q=m;
+                r=m;
 		break;
         case 4:
                 m=atoi(argv[1]);
                 n=atoi(argv[2]);
-                o=atoi(argv[3]);
-    		fill(&A,m,n);
-    		fill(&B,n,o);
-    		fill(&C,m,o);
+                p=atoi(argv[3]);
+                o=n;
+                q=m;
+                r=p;
 		break;
+        case 7:
+                m=atoi(argv[1]);
+                n=atoi(argv[2]);
+                p=atoi(argv[3]);
+                o=n;
+                q=m;
+                r=p;
+		break;
+
         default:
                 printf("Nº de argumentos erróneo\n");
                 return 1;
                 break;
-    }
-    start_clock();
-    for (int j=0;j<1;j++)
+    }*/
+    int test_sizes[] = {
+        31, 32, 96, 97, 127, 128, 129, 191, 192, 229, 255, 256, 257,
+        319, 320, 321, 417, 479, 480, 511, 512, 639, 640, 767, 768, 769, 1000,
+    };
+    int tamano;
+    for(int i=0;i<sizeof(test_sizes)/sizeof(test_sizes[0]);i++)
     {
-        naive_multiplymatrix(&A,&B,&C);
+            tamano=test_sizes[i];   
+            prueba_int(tamano);
+            prueba_float(tamano);
+            prueba_double(tamano);
     }
-    tiempo=end_clock();
-    printf ("La prueba del benchmar naive ha tardado %lf segundos\n",tiempo);
-    start_clock();
-    for (int j=0;j<1;j++)
-    {
-        naive_multiplymatrix_openmp (&A,&B,&C);
-    }
-    tiempo=end_clock();
-    printf ("La prueba del benchmar naive openmp ha tardado %lf segundos\n",tiempo);
-    start_clock();
-    for (int j=0;j<1;j++)
-    {
-        blocked_multiplymatrix(&A,&B,&C);
-    }
-    tiempo=end_clock();
-    printf ("La prueba del benchmar blocked ha tardado %lf segundos\n",tiempo);
-    start_clock();
-    for (int j=0;j<1;j++)
-    {
-        blocked_multiplymatrix_openmp(&A,&B,&C);
-    }
-    tiempo=end_clock();
-    printf ("La prueba del benchmar blocked openmp ha tardado %lf segundos\n",tiempo);
 }
 
 
