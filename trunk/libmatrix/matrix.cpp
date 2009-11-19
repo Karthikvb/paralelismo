@@ -50,6 +50,16 @@ void fill (double * m,int n)
 	for( int i = 0; i < n*n; i++ )
         m[i] = 2 * drand48( ) - 1;
 }
+void fill (Complex * m,int nfilas,int ncolumnas)
+{
+	for( int i = 0; i < nfilas*ncolumnas; i++ )
+        m[i] = Complex(2 * drand48( ) - 1,2 * drand48( ) - 1);
+}
+void fill (Complex * m,int n)
+{
+	for( int i = 0; i < n*n; i++ )
+        m[i] = Complex(2 * drand48( ) - 1,2 * drand48( ) - 1);
+}
 int * crea_matrix(int * m,int n)
 {
 	m=(int *)malloc(sizeof(int)*n*n);
@@ -80,7 +90,16 @@ double * crea_matrix(double * m,int a,int b)
 	m=(double *)malloc(sizeof(double)*a*b);
 	return m;
 }
-
+Complex * crea_matrix(Complex * m,int n)
+{
+	m=(Complex *)malloc(sizeof(Complex)*n*n);
+	return m;
+}
+Complex * crea_matrix(Complex * m,int a,int b)
+{
+	m=(Complex *)malloc(sizeof(Complex)*a*b);
+	return m;
+}
 
 
 
