@@ -57,6 +57,7 @@ int main(int argc, char* argv[])
             prueba_int(tamano);
             prueba_float(tamano);
             prueba_double(tamano);
+            prueba_Complex(tamano);
     }
 }
 

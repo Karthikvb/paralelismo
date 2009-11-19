@@ -11,12 +11,14 @@ prueba: prueba.o matrix_booster.a
 prueba.o: prueba.cpp
 	$(CC) -c $(CFLAGS) prueba.cpp
 
-matrix_booster.a: matrix_booster.o matrix.o 
-	ar -rvcs matrix_booster.a matrix_booster.o matrix.o
+matrix_booster.a: matrix_booster.o matrix.o complex.o
+	ar -rvcs matrix_booster.a matrix_booster.o matrix.o complex.o
 matrix_booster.o: block.h matrix_booster.cpp matrix_booster.hpp 
 	$(CC) -c -O3 -fopenmp matrix_booster.cpp 
-matrix.o: matrix.cpp matrix.hpp
+matrix.o: matrix.cpp matrix.hpp complex.hpp
 	$(CC) -c -O3 matrix.cpp 
+complex.o: complex.cpp complex.hpp
+	$(CC) -c -O3 complex.cpp 
 block.h: $(PROG)
 	./$(PROG) > block.h
 $(PROG): $(PROG).o

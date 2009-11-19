@@ -20,17 +20,21 @@
 #ifndef _MATRIX_HPP_
 #define _MATRIX_HPP_
 
-
+#include "complex.hpp"
 int * crea_matrix(int *,int);
 int * crea_matrix(int *,int,int);
 float * crea_matrix(float *,int);
 float * crea_matrix(float *,int,int);
 double * crea_matrix(double *,int);
 double * crea_matrix(double *,int,int);
+Complex * crea_matrix(Complex *,int);
+Complex * crea_matrix(Complex *,int,int);
 void fill (int *,int);
 void fill (int *,int,int);
 void fill (float *,int);
 void fill (float *,int,int);
 void fill (double *,int);
 void fill (double *,int,int);
+void fill (Complex *,int);
+void fill (Complex *,int,int);
 #endif // _MATRIX_HPP_
