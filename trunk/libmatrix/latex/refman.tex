@@ -1,0 +1,67 @@
+\documentclass[a4paper]{book}
+\usepackage{a4wide}
+\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{times}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{doxygen}
+\makeindex
+\setcounter{tocdepth}{1}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large matrix\_\-booster \\[1ex]\large 1 }\\
+\vspace*{1cm}
+{\large Generado por Doxygen 1.5.5}\\
+\vspace*{0.5cm}
+{\small Sun Nov 29 22:44:30 2009}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\chapter{Índice de clases}
+\input{annotated}
+\chapter{Indice de archivos}
+\input{files}
+\chapter{Documentación de las clases}
+\input{classComplex}
+\chapter{Documentación de archivos}
+\input{block_8h}
+\include{complex_8cpp}
+\include{complex_8hpp}
+\include{matrix_8cpp}
+\include{matrix_8hpp}
+\include{matrix__booster_8cpp}
+\include{matrix__booster_8hpp}
+\include{membench_8c}
+\include{prueba_8cpp}
+\printindex
+\end{document}

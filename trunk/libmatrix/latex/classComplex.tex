@@ -1,0 +1,203 @@
+\hypertarget{classComplex}{
+\section{Referencia de la Clase Complex}
+\label{classComplex}\index{Complex@{Complex}}
+}
+Clase que implementa el tipo complejo.  
+
+
+{\tt \#include $<$complex.hpp$>$}
+
+\subsection*{Métodos públicos}
+\begin{CompactItemize}
+\item 
+\hyperlink{classComplex_43b9f07cdf697c71b5fd506a6cc80b8f}{Complex} ()
+\item 
+\hyperlink{classComplex_d79a5d8db5595f6661f066e3a691ac40}{Complex} (double)
+\item 
+\hyperlink{classComplex_0a9ac766ecb69aa823210728b5238164}{Complex} (double, double)
+\item 
+\hyperlink{classComplex_d6b6aba985d85982e621b244c5533ce6}{Complex} (const \hyperlink{classComplex}{Complex} \&c)
+\item 
+\hyperlink{classComplex}{Complex} \& \hyperlink{classComplex_d63f572bf5b643c714e388cda5c6f5cb}{operator=} (const \hyperlink{classComplex}{Complex} \&c)
+\begin{CompactList}\small\item\em asignacion: \item\end{CompactList}\item 
+\hyperlink{classComplex}{Complex} \hyperlink{classComplex_85335af4619e9e47aa9c0846d1d149b0}{operator+} (const \hyperlink{classComplex}{Complex} \&c) const 
+\begin{CompactList}\small\item\em suma: complejo+complejo \item\end{CompactList}\item 
+\hyperlink{classComplex}{Complex} \hyperlink{classComplex_f4fd1eb88e00915f3f3d51d1d3eeeb0b}{operator+=} (const \hyperlink{classComplex}{Complex} \&c) const 
+\begin{CompactList}\small\item\em suma y asigna: complejo+=complejo \item\end{CompactList}\item 
+\hyperlink{classComplex}{Complex} \hyperlink{classComplex_9db6e1faaf7164c809d3567085b5c89f}{operator-} (const \hyperlink{classComplex}{Complex} \&c) const 
+\begin{CompactList}\small\item\em resta: complejo-complejo \item\end{CompactList}\item 
+\hyperlink{classComplex}{Complex} \hyperlink{classComplex_86f4398baa4ea8b9b52c39ad66f0a763}{operator$\ast$} (const \hyperlink{classComplex}{Complex} \&c) const 
+\begin{CompactList}\small\item\em producto: complejo$\ast$complejo \item\end{CompactList}\item 
+\hyperlink{classComplex}{Complex} \hyperlink{classComplex_9a4a427e85873a2c7ffb2f0dd80e48bc}{operator-} () const 
+\begin{CompactList}\small\item\em producto: complejo$\ast$complejo \item\end{CompactList}\end{CompactItemize}
+\subsection*{Atributos protegidos}
+\begin{CompactItemize}
+\item 
+double \hyperlink{classComplex_843ce2f85af4c57db9063c86f3cd9607}{re}
+\item 
+double \hyperlink{classComplex_776d595d5a1b576e9136cbc6bac0589c}{im}
+\end{CompactItemize}
+\subsection*{Amigas}
+\begin{CompactItemize}
+\item 
+\hyperlink{classComplex}{Complex} \hyperlink{classComplex_9e192c9a21e15575f5d9cbf8cb93c59c}{operator+} (double d, const \hyperlink{classComplex}{Complex} \&c)
+\begin{CompactList}\small\item\em suma: double+complejo \item\end{CompactList}\item 
+\hyperlink{classComplex}{Complex} \hyperlink{classComplex_c04e31ec5cbb8643690dd6c01bab7e0b}{operator-} (double d, const \hyperlink{classComplex}{Complex} \&c)
+\begin{CompactList}\small\item\em resta: double-complejo \item\end{CompactList}\item 
+\hyperlink{classComplex}{Complex} \hyperlink{classComplex_8f7c64a77e1e179f5362bbd9cf5315f6}{operator$\ast$} (double d, const \hyperlink{classComplex}{Complex} \&c)
+\begin{CompactList}\small\item\em producto: double$\ast$complejo \item\end{CompactList}\item 
+ostream \& \hyperlink{classComplex_dd2bef64469040c12f3b483f68391bba}{operator$<$$<$} (ostream \&o, const \hyperlink{classComplex}{Complex} \&c)
+\begin{CompactList}\small\item\em operador de salida: \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Descripción detallada}
+Clase que implementa el tipo complejo. 
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{classComplex_43b9f07cdf697c71b5fd506a6cc80b8f}{
+\index{Complex@{Complex}!Complex@{Complex}}
+\index{Complex@{Complex}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Complex::Complex ()}}
+\label{classComplex_43b9f07cdf697c71b5fd506a6cc80b8f}
+
+
+\hypertarget{classComplex_d79a5d8db5595f6661f066e3a691ac40}{
+\index{Complex@{Complex}!Complex@{Complex}}
+\index{Complex@{Complex}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Complex::Complex (double {\em r})}}
+\label{classComplex_d79a5d8db5595f6661f066e3a691ac40}
+
+
+\hypertarget{classComplex_0a9ac766ecb69aa823210728b5238164}{
+\index{Complex@{Complex}!Complex@{Complex}}
+\index{Complex@{Complex}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Complex::Complex (double {\em r}, \/  double {\em i})}}
+\label{classComplex_0a9ac766ecb69aa823210728b5238164}
+
+
+\hypertarget{classComplex_d6b6aba985d85982e621b244c5533ce6}{
+\index{Complex@{Complex}!Complex@{Complex}}
+\index{Complex@{Complex}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Complex::Complex (const {\bf Complex} \& {\em c})}}
+\label{classComplex_d6b6aba985d85982e621b244c5533ce6}
+
+
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{classComplex_d63f572bf5b643c714e388cda5c6f5cb}{
+\index{Complex@{Complex}!operator=@{operator=}}
+\index{operator=@{operator=}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex} \& Complex::operator= (const {\bf Complex} \& {\em c})}}
+\label{classComplex_d63f572bf5b643c714e388cda5c6f5cb}
+
+
+asignacion: 
+
+\hypertarget{classComplex_85335af4619e9e47aa9c0846d1d149b0}{
+\index{Complex@{Complex}!operator+@{operator+}}
+\index{operator+@{operator+}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex} Complex::operator+ (const {\bf Complex} \& {\em c}) const}}
+\label{classComplex_85335af4619e9e47aa9c0846d1d149b0}
+
+
+suma: complejo+complejo 
+
+\hypertarget{classComplex_f4fd1eb88e00915f3f3d51d1d3eeeb0b}{
+\index{Complex@{Complex}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex} Complex::operator+= (const {\bf Complex} \& {\em c}) const}}
+\label{classComplex_f4fd1eb88e00915f3f3d51d1d3eeeb0b}
+
+
+suma y asigna: complejo+=complejo 
+
+\hypertarget{classComplex_9db6e1faaf7164c809d3567085b5c89f}{
+\index{Complex@{Complex}!operator-@{operator-}}
+\index{operator-@{operator-}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex} Complex::operator- (const {\bf Complex} \& {\em c}) const}}
+\label{classComplex_9db6e1faaf7164c809d3567085b5c89f}
+
+
+resta: complejo-complejo 
+
+\hypertarget{classComplex_86f4398baa4ea8b9b52c39ad66f0a763}{
+\index{Complex@{Complex}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex} Complex::operator$\ast$ (const {\bf Complex} \& {\em c}) const}}
+\label{classComplex_86f4398baa4ea8b9b52c39ad66f0a763}
+
+
+producto: complejo$\ast$complejo 
+
+\hypertarget{classComplex_9a4a427e85873a2c7ffb2f0dd80e48bc}{
+\index{Complex@{Complex}!operator-@{operator-}}
+\index{operator-@{operator-}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex} Complex::operator- () const}}
+\label{classComplex_9a4a427e85873a2c7ffb2f0dd80e48bc}
+
+
+producto: complejo$\ast$complejo 
+
+
+
+\subsection{Documentación de las funciones relacionadas y clases amigas}
+\hypertarget{classComplex_9e192c9a21e15575f5d9cbf8cb93c59c}{
+\index{Complex@{Complex}!operator+@{operator+}}
+\index{operator+@{operator+}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex} operator+ (double {\em d}, \/  const {\bf Complex} \& {\em c})\hspace{0.3cm}{\tt  \mbox{[}friend\mbox{]}}}}
+\label{classComplex_9e192c9a21e15575f5d9cbf8cb93c59c}
+
+
+suma: double+complejo 
+
+\hypertarget{classComplex_c04e31ec5cbb8643690dd6c01bab7e0b}{
+\index{Complex@{Complex}!operator-@{operator-}}
+\index{operator-@{operator-}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex} operator- (double {\em d}, \/  const {\bf Complex} \& {\em c})\hspace{0.3cm}{\tt  \mbox{[}friend\mbox{]}}}}
+\label{classComplex_c04e31ec5cbb8643690dd6c01bab7e0b}
+
+
+resta: double-complejo 
+
+\hypertarget{classComplex_8f7c64a77e1e179f5362bbd9cf5315f6}{
+\index{Complex@{Complex}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex} operator$\ast$ (double {\em d}, \/  const {\bf Complex} \& {\em c})\hspace{0.3cm}{\tt  \mbox{[}friend\mbox{]}}}}
+\label{classComplex_8f7c64a77e1e179f5362bbd9cf5315f6}
+
+
+producto: double$\ast$complejo 
+
+\hypertarget{classComplex_dd2bef64469040c12f3b483f68391bba}{
+\index{Complex@{Complex}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em o}, \/  const {\bf Complex} \& {\em c})\hspace{0.3cm}{\tt  \mbox{[}friend\mbox{]}}}}
+\label{classComplex_dd2bef64469040c12f3b483f68391bba}
+
+
+operador de salida: 
+
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{classComplex_843ce2f85af4c57db9063c86f3cd9607}{
+\index{Complex@{Complex}!re@{re}}
+\index{re@{re}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Complex::re}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classComplex_843ce2f85af4c57db9063c86f3cd9607}
+
+
+\hypertarget{classComplex_776d595d5a1b576e9136cbc6bac0589c}{
+\index{Complex@{Complex}!im@{im}}
+\index{im@{im}!Complex@{Complex}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double {\bf Complex::im}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classComplex_776d595d5a1b576e9136cbc6bac0589c}
+
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros:\begin{CompactItemize}
+\item 
+\hyperlink{complex_8hpp}{complex.hpp}\item 
+\hyperlink{complex_8cpp}{complex.cpp}\end{CompactItemize}
