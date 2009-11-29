@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>matrix_booster: Fichero Fuente matrix_booster.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+<h1>matrix_booster.h</h1><a href="matrix__booster_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include "<a class="code" href="block_8h.html">block.h</a>"</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include "<a class="code" href="matrix_8hpp.html">matrix.hpp</a>"</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string.h&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;float.h&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;math.h&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;sys/time.h&gt;</span>
+<a name="l00009"></a>00009 <span class="keywordtype">void</span> <a class="code" href="matrix__booster_8cpp.html#c3fe40c07e1353c8546655a1623e8119" title="Inicia la cuenta del reloj.">start_clock</a>();
+<a name="l00010"></a>00010 <span class="keywordtype">double</span> <a class="code" href="matrix__booster_8cpp.html#75af42ce2771215f2452f431786fa41e" title="Finaliza la cuenta del reloj y devuelve el tiempo transcurrido.">end_clock</a>();
+<a name="l00011"></a>00011 <span class="keywordtype">int</span> <a class="code" href="matrix__booster_8cpp.html#7c39db9b116a4ce60de7deacd3f31359">naive_multiplymatrix</a>( matrix *,matrix *, matrix *);
+<a name="l00012"></a>00012 <span class="keywordtype">int</span> <a class="code" href="matrix__booster_8cpp.html#faa404afe85f8e86c9af58080135a6dd">naive_multiplymatrix_openmp</a>( matrix *,matrix * B, matrix * C);
+<a name="l00013"></a>00013 <span class="keywordtype">int</span> <a class="code" href="matrix__booster_8cpp.html#e85c16a5cba16b226afb40600a2b4aae">blocked_multiplymatrix</a>(matrix *,matrix * , matrix *);
+<a name="l00014"></a>00014 <span class="keywordtype">int</span> <a class="code" href="matrix__booster_8cpp.html#5bcf7898c16999b8839d826850d2f0f0">blocked_multiplymatrix_openmp</a>(matrix *,matrix *, matrix *);
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 29 22:43:12 2009 para matrix_booster por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>matrix_booster: Referencia del Archivo matrix_booster.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia del Archivo matrix_booster.h</h1><code>#include &quot;<a class="el" href="block_8h-source.html">block.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="matrix_8hpp-source.html">matrix.hpp</a>&quot;</code><br>
+<code>#include &lt;stdlib.h&gt;</code><br>
+<code>#include &lt;stdio.h&gt;</code><br>
+<code>#include &lt;string.h&gt;</code><br>
+<code>#include &lt;float.h&gt;</code><br>
+<code>#include &lt;math.h&gt;</code><br>
+<code>#include &lt;sys/time.h&gt;</code><br>
+
+<p>
+<a href="matrix__booster_8h-source.html">Ir al código fuente de este archivo.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8h.html#c3fe40c07e1353c8546655a1623e8119">start_clock</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8h.html#75af42ce2771215f2452f431786fa41e">end_clock</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8h.html#d48c81443d897b7c9ce848dc84777e12">naive_multiplymatrix</a> (matrix *, matrix *, matrix *)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8h.html#c23bbd86d841cf49b3b75a984b5c4cec">naive_multiplymatrix_openmp</a> (matrix *, matrix *B, matrix *C)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8h.html#0017df73428921ca3d2eac028f7bb9ba">blocked_multiplymatrix</a> (matrix *, matrix *, matrix *)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8h.html#665726ee718b557f34d4b55208d3aed1">blocked_multiplymatrix_openmp</a> (matrix *, matrix *, matrix *)</td></tr>
+
+</table>
+<hr><h2>Documentación de las funciones</h2>
+<a class="anchor" name="0017df73428921ca3d2eac028f7bb9ba"></a><!-- doxytag: member="matrix_booster.h::blocked_multiplymatrix" ref="0017df73428921ca3d2eac028f7bb9ba" args="(matrix *, matrix *, matrix *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="665726ee718b557f34d4b55208d3aed1"></a><!-- doxytag: member="matrix_booster.h::blocked_multiplymatrix_openmp" ref="665726ee718b557f34d4b55208d3aed1" args="(matrix *, matrix *, matrix *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="75af42ce2771215f2452f431786fa41e"></a><!-- doxytag: member="matrix_booster.h::end_clock" ref="75af42ce2771215f2452f431786fa41e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double end_clock           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="d48c81443d897b7c9ce848dc84777e12"></a><!-- doxytag: member="matrix_booster.h::naive_multiplymatrix" ref="d48c81443d897b7c9ce848dc84777e12" args="(matrix *, matrix *, matrix *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="c23bbd86d841cf49b3b75a984b5c4cec"></a><!-- doxytag: member="matrix_booster.h::naive_multiplymatrix_openmp" ref="c23bbd86d841cf49b3b75a984b5c4cec" args="(matrix *, matrix *B, matrix *C)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">matrix *&nbsp;</td>
+          <td class="paramname"> <em>C</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="c3fe40c07e1353c8546655a1623e8119"></a><!-- doxytag: member="matrix_booster.h::start_clock" ref="c3fe40c07e1353c8546655a1623e8119" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void start_clock           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 29 22:43:13 2009 para matrix_booster por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>
