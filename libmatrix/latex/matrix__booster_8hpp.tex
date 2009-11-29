@@ -1,0 +1,561 @@
+\hypertarget{matrix__booster_8hpp}{
+\section{Referencia del Archivo matrix\_\-booster.hpp}
+\label{matrix__booster_8hpp}\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}}
+}
+{\tt \#include \char`\"{}block.h\char`\"{}}\par
+{\tt \#include \char`\"{}matrix.hpp\char`\"{}}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include $<$float.h$>$}\par
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include $<$sys/time.h$>$}\par
+{\tt \#include $<$mkl.h$>$}\par
+\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+void \hyperlink{matrix__booster_8hpp_c3fe40c07e1353c8546655a1623e8119}{start\_\-clock} ()
+\begin{CompactList}\small\item\em Inicia la cuenta del reloj. \item\end{CompactList}\item 
+double \hyperlink{matrix__booster_8hpp_75af42ce2771215f2452f431786fa41e}{end\_\-clock} ()
+\begin{CompactList}\small\item\em Finaliza la cuenta del reloj y devuelve el tiempo transcurrido. \item\end{CompactList}\item 
+int \hyperlink{matrix__booster_8hpp_7c39db9b116a4ce60de7deacd3f31359}{naive\_\-multiplymatrix} (int $\ast$A, int $\ast$B, int $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_faa404afe85f8e86c9af58080135a6dd}{naive\_\-multiplymatrix\_\-openmp} (int $\ast$A, int $\ast$B, int $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_e85c16a5cba16b226afb40600a2b4aae}{blocked\_\-multiplymatrix} (int $\ast$A, int $\ast$B, int $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_5bcf7898c16999b8839d826850d2f0f0}{blocked\_\-multiplymatrix\_\-openmp} (int $\ast$A, int $\ast$B, int $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_1017d9a57fc05d403227782915b9f178}{naive\_\-multiplymatrix} (float $\ast$A, float $\ast$B, float $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_3555546223c7df2fff075ec88d5fe779}{naive\_\-multiplymatrix\_\-openmp} (float $\ast$A, float $\ast$B, float $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_f1e03f4936fda7e121cafdaa1d11e665}{blocked\_\-multiplymatrix} (float $\ast$A, float $\ast$B, float $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_61b8fc4f1cd0cbac7ca115c13ec50c3c}{blocked\_\-multiplymatrix\_\-openmp} (float $\ast$A, float $\ast$B, float $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_afaedffbf4718632f487169e39a011ae}{naive\_\-multiplymatrix} (double $\ast$A, double $\ast$B, double $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_cc062a6e53598cc737b40dff3e163716}{naive\_\-multiplymatrix\_\-openmp} (double $\ast$A, double $\ast$B, double $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_76673e4a82765e7a065abefe1626ec71}{blocked\_\-multiplymatrix} (double $\ast$A, double $\ast$B, double $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_a1c0ee20f8387a45547cd2cf85c0a9a0}{blocked\_\-multiplymatrix\_\-openmp} (double $\ast$A, double $\ast$B, double $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_3ec8abae7b7ba6d2f0ac2dd0635ba831}{naive\_\-multiplymatrixc} (\hyperlink{classComplex}{Complex} $\ast$A, \hyperlink{classComplex}{Complex} $\ast$B, \hyperlink{classComplex}{Complex} $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_01761158be438af17d977f534a487bb4}{naive\_\-multiplymatrix\_\-openmp} (\hyperlink{classComplex}{Complex} $\ast$A, \hyperlink{classComplex}{Complex} $\ast$B, \hyperlink{classComplex}{Complex} $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_67cca5dbfa464b929b8b1c48be4bccb0}{blocked\_\-multiplymatrix} (\hyperlink{classComplex}{Complex} $\ast$A, \hyperlink{classComplex}{Complex} $\ast$B, \hyperlink{classComplex}{Complex} $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_f78cb7a68777c8d8ab449f771740d002}{blocked\_\-multiplymatrix\_\-openmp} (\hyperlink{classComplex}{Complex} $\ast$A, \hyperlink{classComplex}{Complex} $\ast$B, \hyperlink{classComplex}{Complex} $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_fa665677ee7b09a937d1f81bbe26f9ed}{naive\_\-multiplymatrix} (complex$<$ double $>$ $\ast$A, complex$<$ double $>$ $\ast$B, complex$<$ double $>$ $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_a55c2b57ac6c8cb7fe0b79503843a112}{naive\_\-multiplymatrix\_\-openmp} (complex$<$ double $>$ $\ast$A, complex$<$ double $>$ $\ast$B, complex$<$ double $>$ $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_82070ca217d9de78eab4977b26ec4d95}{blocked\_\-multiplymatrix} (complex$<$ double $>$ $\ast$A, complex$<$ double $>$ $\ast$B, complex$<$ double $>$ $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_5adf5d0def33c4b6f7f06a85390ffa3e}{blocked\_\-multiplymatrix\_\-openmp} (complex$<$ double $>$ $\ast$A, complex$<$ double $>$ $\ast$B, complex$<$ double $>$ $\ast$C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)
+\item 
+int \hyperlink{matrix__booster_8hpp_780020279899dffc597344ca8c8ec20e}{prueba\_\-int} (int m, int n, int o, int p, int q, int r)
+\begin{CompactList}\small\item\em Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de enteros de los tamaños especificados por parámetro. \item\end{CompactList}\item 
+int \hyperlink{matrix__booster_8hpp_271dc4e9712892b2373739e30d48819b}{prueba\_\-float} (int m, int n, int o, int p, int q, int r)
+\begin{CompactList}\small\item\em Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de float de los tamaños especificados por parámetro. \item\end{CompactList}\item 
+int \hyperlink{matrix__booster_8hpp_574e17ef400289387dacc36890852f5d}{prueba\_\-double} (int m, int n, int o, int p, int q, int r)
+\begin{CompactList}\small\item\em Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de double de los tamaños especificados por parámetro. \item\end{CompactList}\item 
+int \hyperlink{matrix__booster_8hpp_f24e32d674adc1bd951cc0fac160e40a}{prueba\_\-Complex} (int m, int n, int o, int p, int q, int r)
+\begin{CompactList}\small\item\em Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de complejos de los tamaños especificados por parámetro. \item\end{CompactList}\item 
+int \hyperlink{matrix__booster_8hpp_c99dee2733b2d31b71a78b5dcff4f5b3}{prueba\_\-stdcomplex} (int m, int n, int o, int p, int q, int r)
+\begin{CompactList}\small\item\em Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de std::complex$<$double$>$ de los tamaños especificados por parámetro. \item\end{CompactList}\item 
+int \hyperlink{matrix__booster_8hpp_f79d216305d227ebb80b0e0212955a34}{prueba\_\-int} (int n)
+\begin{CompactList}\small\item\em Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de enteros de los tamaños especificados por parámetro. \item\end{CompactList}\item 
+int \hyperlink{matrix__booster_8hpp_e271335341fb1b8debadf93c4d89a565}{prueba\_\-float} (int n)
+\begin{CompactList}\small\item\em Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de float de los tamaños especificados por parámetro. \item\end{CompactList}\item 
+int \hyperlink{matrix__booster_8hpp_20ee031ea933207c342c5bf0eee235e3}{prueba\_\-double} (int n)
+\begin{CompactList}\small\item\em Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de double de los tamaños especificados por parámetro. \item\end{CompactList}\item 
+int \hyperlink{matrix__booster_8hpp_49a58402d622821b2eeaba99c838c67b}{prueba\_\-Complex} (int n)
+\begin{CompactList}\small\item\em Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de complejos de los tamaños especificados por parámetro. \item\end{CompactList}\item 
+int \hyperlink{matrix__booster_8hpp_ada57697934df542cfa23540b1548efd}{prueba\_\-stdcomplex} (int n)
+\begin{CompactList}\small\item\em Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de std::complex$<$double$>$ de los tamaños especificados por parámetro. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{matrix__booster_8hpp_82070ca217d9de78eab4977b26ec4d95}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!blocked\_\-multiplymatrix@{blocked\_\-multiplymatrix}}
+\index{blocked\_\-multiplymatrix@{blocked\_\-multiplymatrix}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int blocked\_\-multiplymatrix (complex$<$ double $>$ $\ast$ {\em A}, \/  complex$<$ double $>$ $\ast$ {\em B}, \/  complex$<$ double $>$ $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_82070ca217d9de78eab4977b26ec4d95}
+
+
+Realiza el producto de matrices de std::complex$<$double$>$ A y B y los suma a la matriz C mediante el metodo blocked \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_67cca5dbfa464b929b8b1c48be4bccb0}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!blocked\_\-multiplymatrix@{blocked\_\-multiplymatrix}}
+\index{blocked\_\-multiplymatrix@{blocked\_\-multiplymatrix}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int blocked\_\-multiplymatrix ({\bf Complex} $\ast$ {\em A}, \/  {\bf Complex} $\ast$ {\em B}, \/  {\bf Complex} $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_67cca5dbfa464b929b8b1c48be4bccb0}
+
+
+Realiza el producto de matrices de \hyperlink{classComplex}{Complex} A y B y los suma a la matriz C mediante el metodo blocked \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_76673e4a82765e7a065abefe1626ec71}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!blocked\_\-multiplymatrix@{blocked\_\-multiplymatrix}}
+\index{blocked\_\-multiplymatrix@{blocked\_\-multiplymatrix}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int blocked\_\-multiplymatrix (double $\ast$ {\em A}, \/  double $\ast$ {\em B}, \/  double $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_76673e4a82765e7a065abefe1626ec71}
+
+
+Realiza el producto de matrices de double A y B y los suma a la matriz C mediante el metodo blocked \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_f1e03f4936fda7e121cafdaa1d11e665}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!blocked\_\-multiplymatrix@{blocked\_\-multiplymatrix}}
+\index{blocked\_\-multiplymatrix@{blocked\_\-multiplymatrix}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int blocked\_\-multiplymatrix (float $\ast$ {\em A}, \/  float $\ast$ {\em B}, \/  float $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_f1e03f4936fda7e121cafdaa1d11e665}
+
+
+Realiza el producto de matrices de float A y B y los suma a la matriz C mediante el metodo blocked \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_e85c16a5cba16b226afb40600a2b4aae}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!blocked\_\-multiplymatrix@{blocked\_\-multiplymatrix}}
+\index{blocked\_\-multiplymatrix@{blocked\_\-multiplymatrix}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int blocked\_\-multiplymatrix (int $\ast$ {\em A}, \/  int $\ast$ {\em B}, \/  int $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_e85c16a5cba16b226afb40600a2b4aae}
+
+
+Realiza el producto de matrices de enteros A y B y los suma a la matriz C mediante el metodo blocked \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]$\ast$A Puntero a matriz de enteros. \item[{\em int}]$\ast$B Puntero a matriz de enteros. \item[{\em int}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_5adf5d0def33c4b6f7f06a85390ffa3e}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!blocked\_\-multiplymatrix\_\-openmp@{blocked\_\-multiplymatrix\_\-openmp}}
+\index{blocked\_\-multiplymatrix\_\-openmp@{blocked\_\-multiplymatrix\_\-openmp}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int blocked\_\-multiplymatrix\_\-openmp (complex$<$ double $>$ $\ast$ {\em A}, \/  complex$<$ double $>$ $\ast$ {\em B}, \/  complex$<$ double $>$ $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_5adf5d0def33c4b6f7f06a85390ffa3e}
+
+
+Realiza el producto de matrices de std::complex$<$double$>$ A y B y los suma a la matriz C mediante el metodo blocked con paralelismo mediante openmp \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_f78cb7a68777c8d8ab449f771740d002}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!blocked\_\-multiplymatrix\_\-openmp@{blocked\_\-multiplymatrix\_\-openmp}}
+\index{blocked\_\-multiplymatrix\_\-openmp@{blocked\_\-multiplymatrix\_\-openmp}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int blocked\_\-multiplymatrix\_\-openmp ({\bf Complex} $\ast$ {\em A}, \/  {\bf Complex} $\ast$ {\em B}, \/  {\bf Complex} $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_f78cb7a68777c8d8ab449f771740d002}
+
+
+Realiza el producto de matrices de \hyperlink{classComplex}{Complex} A y B y los suma a la matriz C mediante el metodo blocked con paralelismo mediante openmp \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_a1c0ee20f8387a45547cd2cf85c0a9a0}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!blocked\_\-multiplymatrix\_\-openmp@{blocked\_\-multiplymatrix\_\-openmp}}
+\index{blocked\_\-multiplymatrix\_\-openmp@{blocked\_\-multiplymatrix\_\-openmp}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int blocked\_\-multiplymatrix\_\-openmp (double $\ast$ {\em A}, \/  double $\ast$ {\em B}, \/  double $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_a1c0ee20f8387a45547cd2cf85c0a9a0}
+
+
+Realiza el producto de matrices de double A y B y los suma a la matriz C mediante el metodo blocked con paralelismo mediante openmp \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_61b8fc4f1cd0cbac7ca115c13ec50c3c}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!blocked\_\-multiplymatrix\_\-openmp@{blocked\_\-multiplymatrix\_\-openmp}}
+\index{blocked\_\-multiplymatrix\_\-openmp@{blocked\_\-multiplymatrix\_\-openmp}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int blocked\_\-multiplymatrix\_\-openmp (float $\ast$ {\em A}, \/  float $\ast$ {\em B}, \/  float $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_61b8fc4f1cd0cbac7ca115c13ec50c3c}
+
+
+Realiza el producto de matrices de float A y B y los suma a la matriz C mediante el metodo blocked con paralelismo mediante openmp \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_5bcf7898c16999b8839d826850d2f0f0}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!blocked\_\-multiplymatrix\_\-openmp@{blocked\_\-multiplymatrix\_\-openmp}}
+\index{blocked\_\-multiplymatrix\_\-openmp@{blocked\_\-multiplymatrix\_\-openmp}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int blocked\_\-multiplymatrix\_\-openmp (int $\ast$ {\em A}, \/  int $\ast$ {\em B}, \/  int $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_5bcf7898c16999b8839d826850d2f0f0}
+
+
+Realiza el producto de matrices de enteros A y B y los suma a la matriz C mediante el metodo blocked con paralelismo mediante openmp \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]$\ast$A Puntero a matriz de enteros. \item[{\em int}]$\ast$B Puntero a matriz de enteros. \item[{\em int}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_75af42ce2771215f2452f431786fa41e}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!end\_\-clock@{end\_\-clock}}
+\index{end\_\-clock@{end\_\-clock}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double end\_\-clock ()}}
+\label{matrix__booster_8hpp_75af42ce2771215f2452f431786fa41e}
+
+
+Finaliza la cuenta del reloj y devuelve el tiempo transcurrido. 
+
+\hypertarget{matrix__booster_8hpp_fa665677ee7b09a937d1f81bbe26f9ed}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!naive\_\-multiplymatrix@{naive\_\-multiplymatrix}}
+\index{naive\_\-multiplymatrix@{naive\_\-multiplymatrix}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int naive\_\-multiplymatrix (complex$<$ double $>$ $\ast$ {\em A}, \/  complex$<$ double $>$ $\ast$ {\em B}, \/  complex$<$ double $>$ $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_fa665677ee7b09a937d1f81bbe26f9ed}
+
+
+Realiza el producto de matrices de std::complex$<$double$>$ A y B y los suma a la matriz C mediante el metodo naive \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_afaedffbf4718632f487169e39a011ae}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!naive\_\-multiplymatrix@{naive\_\-multiplymatrix}}
+\index{naive\_\-multiplymatrix@{naive\_\-multiplymatrix}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int naive\_\-multiplymatrix (double $\ast$ {\em A}, \/  double $\ast$ {\em B}, \/  double $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_afaedffbf4718632f487169e39a011ae}
+
+
+Realiza el producto de matrices de double A y B y los suma a la matriz C mediante el metodo naive \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_1017d9a57fc05d403227782915b9f178}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!naive\_\-multiplymatrix@{naive\_\-multiplymatrix}}
+\index{naive\_\-multiplymatrix@{naive\_\-multiplymatrix}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int naive\_\-multiplymatrix (float $\ast$ {\em A}, \/  float $\ast$ {\em B}, \/  float $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_1017d9a57fc05d403227782915b9f178}
+
+
+Realiza el producto de matrices de float A y B y los suma a la matriz C mediante el metodo naive \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_7c39db9b116a4ce60de7deacd3f31359}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!naive\_\-multiplymatrix@{naive\_\-multiplymatrix}}
+\index{naive\_\-multiplymatrix@{naive\_\-multiplymatrix}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int naive\_\-multiplymatrix (int $\ast$ {\em A}, \/  int $\ast$ {\em B}, \/  int $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_7c39db9b116a4ce60de7deacd3f31359}
+
+
+Realiza el producto de matrices de enteros A y B y los suma a la matriz C mediante el metodo naive. \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]$\ast$A Puntero a matriz de enteros. \item[{\em int}]$\ast$B Puntero a matriz de enteros. \item[{\em int}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em intnfilasc}]Nº de filas matriz C. \item[{\em intncolumnasc}]Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_a55c2b57ac6c8cb7fe0b79503843a112}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!naive\_\-multiplymatrix\_\-openmp@{naive\_\-multiplymatrix\_\-openmp}}
+\index{naive\_\-multiplymatrix\_\-openmp@{naive\_\-multiplymatrix\_\-openmp}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int naive\_\-multiplymatrix\_\-openmp (complex$<$ double $>$ $\ast$ {\em A}, \/  complex$<$ double $>$ $\ast$ {\em B}, \/  complex$<$ double $>$ $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_a55c2b57ac6c8cb7fe0b79503843a112}
+
+
+Realiza el producto de matrices de std::complex$<$double$>$ A y B y los suma a la matriz C mediante el metodo naive con paralelismo mediante openmp \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_01761158be438af17d977f534a487bb4}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!naive\_\-multiplymatrix\_\-openmp@{naive\_\-multiplymatrix\_\-openmp}}
+\index{naive\_\-multiplymatrix\_\-openmp@{naive\_\-multiplymatrix\_\-openmp}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int naive\_\-multiplymatrix\_\-openmp ({\bf Complex} $\ast$ {\em A}, \/  {\bf Complex} $\ast$ {\em B}, \/  {\bf Complex} $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_01761158be438af17d977f534a487bb4}
+
+
+Realiza el producto de matrices de \hyperlink{classComplex}{Complex} A y B y los suma a la matriz C mediante el metodo naive con paralelismo mediante openmp \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_cc062a6e53598cc737b40dff3e163716}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!naive\_\-multiplymatrix\_\-openmp@{naive\_\-multiplymatrix\_\-openmp}}
+\index{naive\_\-multiplymatrix\_\-openmp@{naive\_\-multiplymatrix\_\-openmp}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int naive\_\-multiplymatrix\_\-openmp (double $\ast$ {\em A}, \/  double $\ast$ {\em B}, \/  double $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_cc062a6e53598cc737b40dff3e163716}
+
+
+Realiza el producto de matrices de double A y B y los suma a la matriz C mediante el metodo naive con paralelismo mediante openmp \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_3555546223c7df2fff075ec88d5fe779}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!naive\_\-multiplymatrix\_\-openmp@{naive\_\-multiplymatrix\_\-openmp}}
+\index{naive\_\-multiplymatrix\_\-openmp@{naive\_\-multiplymatrix\_\-openmp}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int naive\_\-multiplymatrix\_\-openmp (float $\ast$ {\em A}, \/  float $\ast$ {\em B}, \/  float $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_3555546223c7df2fff075ec88d5fe779}
+
+
+Realiza el producto de matrices de float A y B y los suma a la matriz C mediante el metodo naive con paralelismo mediante openmp \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_faa404afe85f8e86c9af58080135a6dd}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!naive\_\-multiplymatrix\_\-openmp@{naive\_\-multiplymatrix\_\-openmp}}
+\index{naive\_\-multiplymatrix\_\-openmp@{naive\_\-multiplymatrix\_\-openmp}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int naive\_\-multiplymatrix\_\-openmp (int $\ast$ {\em A}, \/  int $\ast$ {\em B}, \/  int $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_faa404afe85f8e86c9af58080135a6dd}
+
+
+Realiza el producto de matrices de enteros A y B y los suma a la matriz C mediante el metodo naive con paralelismo mediante openmp. \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]$\ast$A Puntero a matriz de enteros. \item[{\em int}]$\ast$B Puntero a matriz de enteros. \item[{\em int}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_3ec8abae7b7ba6d2f0ac2dd0635ba831}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!naive\_\-multiplymatrixc@{naive\_\-multiplymatrixc}}
+\index{naive\_\-multiplymatrixc@{naive\_\-multiplymatrixc}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int naive\_\-multiplymatrixc ({\bf Complex} $\ast$ {\em A}, \/  {\bf Complex} $\ast$ {\em B}, \/  {\bf Complex} $\ast$ {\em C}, \/  int {\em nfilasa}, \/  int {\em ncolumnasa}, \/  int {\em nfilasb}, \/  int {\em ncolumnasb}, \/  int {\em nfilasc}, \/  int {\em ncolumnasc})}}
+\label{matrix__booster_8hpp_3ec8abae7b7ba6d2f0ac2dd0635ba831}
+
+
+Realiza el producto de matrices de \hyperlink{classComplex}{Complex} A y B y los suma a la matriz C mediante el metodo naive \begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em float}]$\ast$A Puntero a matriz de enteros. \item[{\em float}]$\ast$B Puntero a matriz de enteros. \item[{\em float}]$\ast$C Puntero a matriz de enteros. \item[{\em int}]nfilasa Nº de filas matriz A. \item[{\em int}]ncolumnasa Nº de columnas matriz A. \item[{\em int}]nfilasb Nº de filas matriz B. \item[{\em int}]ncolumnasb Nº de columnas matriz B. \item[{\em int}]nfilasc Nº de filas matriz C. \item[{\em int}]ncolumnasc Nº de columnas matriz C. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Devuelve:]0 si Ok 
+
+1 si los tamaños de las matrices son incompatibles. \end{Desc}
+\hypertarget{matrix__booster_8hpp_49a58402d622821b2eeaba99c838c67b}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!prueba\_\-Complex@{prueba\_\-Complex}}
+\index{prueba\_\-Complex@{prueba\_\-Complex}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int prueba\_\-Complex (int {\em n})}}
+\label{matrix__booster_8hpp_49a58402d622821b2eeaba99c838c67b}
+
+
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de complejos de los tamaños especificados por parámetro. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]n Dimensión de las matrices cuadradas a multiplicar \end{description}
+\end{Desc}
+\hypertarget{matrix__booster_8hpp_f24e32d674adc1bd951cc0fac160e40a}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!prueba\_\-Complex@{prueba\_\-Complex}}
+\index{prueba\_\-Complex@{prueba\_\-Complex}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int prueba\_\-Complex (int {\em m}, \/  int {\em n}, \/  int {\em o}, \/  int {\em p}, \/  int {\em q}, \/  int {\em r})}}
+\label{matrix__booster_8hpp_f24e32d674adc1bd951cc0fac160e40a}
+
+
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de complejos de los tamaños especificados por parámetro. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]m Nº de filas matriz A. \item[{\em int}]n Nº de columnas matriz A. \item[{\em int}]o Nº de filas matriz B. \item[{\em int}]p Nº de columnas matriz B. \item[{\em int}]q Nº de filas matriz C. \item[{\em int}]r Nº de columnas matriz C. \end{description}
+\end{Desc}
+\hypertarget{matrix__booster_8hpp_20ee031ea933207c342c5bf0eee235e3}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!prueba\_\-double@{prueba\_\-double}}
+\index{prueba\_\-double@{prueba\_\-double}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int prueba\_\-double (int {\em n})}}
+\label{matrix__booster_8hpp_20ee031ea933207c342c5bf0eee235e3}
+
+
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de double de los tamaños especificados por parámetro. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]n Dimensión de las matrices cuadradas a multiplicar \end{description}
+\end{Desc}
+\hypertarget{matrix__booster_8hpp_574e17ef400289387dacc36890852f5d}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!prueba\_\-double@{prueba\_\-double}}
+\index{prueba\_\-double@{prueba\_\-double}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int prueba\_\-double (int {\em m}, \/  int {\em n}, \/  int {\em o}, \/  int {\em p}, \/  int {\em q}, \/  int {\em r})}}
+\label{matrix__booster_8hpp_574e17ef400289387dacc36890852f5d}
+
+
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de double de los tamaños especificados por parámetro. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]m Nº de filas matriz A. \item[{\em int}]n Nº de columnas matriz A. \item[{\em int}]o Nº de filas matriz B. \item[{\em int}]p Nº de columnas matriz B. \item[{\em int}]q Nº de filas matriz C. \item[{\em int}]r Nº de columnas matriz C. \end{description}
+\end{Desc}
+\hypertarget{matrix__booster_8hpp_e271335341fb1b8debadf93c4d89a565}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!prueba\_\-float@{prueba\_\-float}}
+\index{prueba\_\-float@{prueba\_\-float}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int prueba\_\-float (int {\em n})}}
+\label{matrix__booster_8hpp_e271335341fb1b8debadf93c4d89a565}
+
+
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de float de los tamaños especificados por parámetro. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]n Dimensión de las matrices cuadradas a multiplicar \end{description}
+\end{Desc}
+\hypertarget{matrix__booster_8hpp_271dc4e9712892b2373739e30d48819b}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!prueba\_\-float@{prueba\_\-float}}
+\index{prueba\_\-float@{prueba\_\-float}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int prueba\_\-float (int {\em m}, \/  int {\em n}, \/  int {\em o}, \/  int {\em p}, \/  int {\em q}, \/  int {\em r})}}
+\label{matrix__booster_8hpp_271dc4e9712892b2373739e30d48819b}
+
+
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de float de los tamaños especificados por parámetro. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]m Nº de filas matriz A. \item[{\em int}]n Nº de columnas matriz A. \item[{\em int}]o Nº de filas matriz B. \item[{\em int}]p Nº de columnas matriz B. \item[{\em int}]q Nº de filas matriz C. \item[{\em int}]r Nº de columnas matriz C. \end{description}
+\end{Desc}
+\hypertarget{matrix__booster_8hpp_f79d216305d227ebb80b0e0212955a34}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!prueba\_\-int@{prueba\_\-int}}
+\index{prueba\_\-int@{prueba\_\-int}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int prueba\_\-int (int {\em n})}}
+\label{matrix__booster_8hpp_f79d216305d227ebb80b0e0212955a34}
+
+
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de enteros de los tamaños especificados por parámetro. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]n Dimensión de las matrices cuadradas a multiplicar \end{description}
+\end{Desc}
+\hypertarget{matrix__booster_8hpp_780020279899dffc597344ca8c8ec20e}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!prueba\_\-int@{prueba\_\-int}}
+\index{prueba\_\-int@{prueba\_\-int}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int prueba\_\-int (int {\em m}, \/  int {\em n}, \/  int {\em o}, \/  int {\em p}, \/  int {\em q}, \/  int {\em r})}}
+\label{matrix__booster_8hpp_780020279899dffc597344ca8c8ec20e}
+
+
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de enteros de los tamaños especificados por parámetro. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]m Nº de filas matriz A. \item[{\em int}]n Nº de columnas matriz A. \item[{\em int}]o Nº de filas matriz B. \item[{\em int}]p Nº de columnas matriz B. \item[{\em int}]q Nº de filas matriz C. \item[{\em int}]r Nº de columnas matriz C. \end{description}
+\end{Desc}
+\hypertarget{matrix__booster_8hpp_ada57697934df542cfa23540b1548efd}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!prueba\_\-stdcomplex@{prueba\_\-stdcomplex}}
+\index{prueba\_\-stdcomplex@{prueba\_\-stdcomplex}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int prueba\_\-stdcomplex (int {\em n})}}
+\label{matrix__booster_8hpp_ada57697934df542cfa23540b1548efd}
+
+
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de std::complex$<$double$>$ de los tamaños especificados por parámetro. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]n Dimensión de las matrices cuadradas a multiplicar \end{description}
+\end{Desc}
+\hypertarget{matrix__booster_8hpp_c99dee2733b2d31b71a78b5dcff4f5b3}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!prueba\_\-stdcomplex@{prueba\_\-stdcomplex}}
+\index{prueba\_\-stdcomplex@{prueba\_\-stdcomplex}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int prueba\_\-stdcomplex (int {\em m}, \/  int {\em n}, \/  int {\em o}, \/  int {\em p}, \/  int {\em q}, \/  int {\em r})}}
+\label{matrix__booster_8hpp_c99dee2733b2d31b71a78b5dcff4f5b3}
+
+
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de std::complex$<$double$>$ de los tamaños especificados por parámetro. 
+
+\begin{Desc}
+\item[Parámetros:]
+\begin{description}
+\item[{\em int}]m Nº de filas matriz A. \item[{\em int}]n Nº de columnas matriz A. \item[{\em int}]o Nº de filas matriz B. \item[{\em int}]p Nº de columnas matriz B. \item[{\em int}]q Nº de filas matriz C. \item[{\em int}]r Nº de columnas matriz C. \end{description}
+\end{Desc}
+\hypertarget{matrix__booster_8hpp_c3fe40c07e1353c8546655a1623e8119}{
+\index{matrix\_\-booster.hpp@{matrix\_\-booster.hpp}!start\_\-clock@{start\_\-clock}}
+\index{start\_\-clock@{start\_\-clock}!matrix_booster.hpp@{matrix\_\-booster.hpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void start\_\-clock ()}}
+\label{matrix__booster_8hpp_c3fe40c07e1353c8546655a1623e8119}
+
+
+Inicia la cuenta del reloj. 
+

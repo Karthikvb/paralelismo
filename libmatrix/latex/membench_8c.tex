@@ -1,0 +1,100 @@
+\hypertarget{membench_8c}{
+\section{Referencia del Archivo membench.c}
+\label{membench_8c}\index{membench.c@{membench.c}}
+}
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$time.h$>$}\par
+{\tt \#include $<$limits.h$>$}\par
+{\tt \#include $<$sys/time.h$>$}\par
+{\tt \#include $<$sys/types.h$>$}\par
+{\tt \#include $<$math.h$>$}\par
+\subsection*{Definiciones}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{membench_8c_fc597c76b4f04a2da506a240d51d89a0}{SAMPLE}~10
+\item 
+\#define \hyperlink{membench_8c_0611b9978dbe59d7aa75c5ee3f2e5256}{CACHE\_\-MIN}~(1024)
+\item 
+\#define \hyperlink{membench_8c_fec9a6b2892deafb8f1975cf1282dbbe}{CACHE\_\-MAX}~(1024$\ast$1024$\ast$8)
+\item 
+\#define \hyperlink{membench_8c_b018ad51ca4d68dcda15ee205489a648}{TIME\_\-DIF\_\-TO\_\-NS}(s, f)~((f.tv\_\-sec-s.tv\_\-sec)$\ast$1000000.0 + (f.tv\_\-usec-s.tv\_\-usec))
+\item 
+\#define \hyperlink{membench_8c_fa99ec4acc4ecb2dc3c2d05da15d0e3f}{MAX}(a, b)~(((a)$>$(b))?(a):(b))
+\item 
+\#define \hyperlink{membench_8c_3acffbd305ee72dcd4593c0d8af64a4f}{MIN}(a, b)~(((a)$<$(b))?(a):(b))
+\end{CompactItemize}
+\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+int \hyperlink{membench_8c_e66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+int \hyperlink{membench_8c_c9426a6536abee994e66805415396021}{x} \mbox{[}CACHE\_\-MAX\mbox{]}
+\end{CompactItemize}
+
+
+\subsection{Documentación de las definiciones}
+\hypertarget{membench_8c_fec9a6b2892deafb8f1975cf1282dbbe}{
+\index{membench.c@{membench.c}!CACHE\_\-MAX@{CACHE\_\-MAX}}
+\index{CACHE\_\-MAX@{CACHE\_\-MAX}!membench.c@{membench.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define CACHE\_\-MAX~(1024$\ast$1024$\ast$8)}}
+\label{membench_8c_fec9a6b2892deafb8f1975cf1282dbbe}
+
+
+\hypertarget{membench_8c_0611b9978dbe59d7aa75c5ee3f2e5256}{
+\index{membench.c@{membench.c}!CACHE\_\-MIN@{CACHE\_\-MIN}}
+\index{CACHE\_\-MIN@{CACHE\_\-MIN}!membench.c@{membench.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define CACHE\_\-MIN~(1024)}}
+\label{membench_8c_0611b9978dbe59d7aa75c5ee3f2e5256}
+
+
+\hypertarget{membench_8c_fa99ec4acc4ecb2dc3c2d05da15d0e3f}{
+\index{membench.c@{membench.c}!MAX@{MAX}}
+\index{MAX@{MAX}!membench.c@{membench.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define MAX(a, \/  b)~(((a)$>$(b))?(a):(b))}}
+\label{membench_8c_fa99ec4acc4ecb2dc3c2d05da15d0e3f}
+
+
+\hypertarget{membench_8c_3acffbd305ee72dcd4593c0d8af64a4f}{
+\index{membench.c@{membench.c}!MIN@{MIN}}
+\index{MIN@{MIN}!membench.c@{membench.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define MIN(a, \/  b)~(((a)$<$(b))?(a):(b))}}
+\label{membench_8c_3acffbd305ee72dcd4593c0d8af64a4f}
+
+
+\hypertarget{membench_8c_fc597c76b4f04a2da506a240d51d89a0}{
+\index{membench.c@{membench.c}!SAMPLE@{SAMPLE}}
+\index{SAMPLE@{SAMPLE}!membench.c@{membench.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define SAMPLE~10}}
+\label{membench_8c_fc597c76b4f04a2da506a240d51d89a0}
+
+
+\hypertarget{membench_8c_b018ad51ca4d68dcda15ee205489a648}{
+\index{membench.c@{membench.c}!TIME\_\-DIF\_\-TO\_\-NS@{TIME\_\-DIF\_\-TO\_\-NS}}
+\index{TIME\_\-DIF\_\-TO\_\-NS@{TIME\_\-DIF\_\-TO\_\-NS}!membench.c@{membench.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\#define TIME\_\-DIF\_\-TO\_\-NS(s, \/  f)~((f.tv\_\-sec-s.tv\_\-sec)$\ast$1000000.0 + (f.tv\_\-usec-s.tv\_\-usec))}}
+\label{membench_8c_b018ad51ca4d68dcda15ee205489a648}
+
+
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{membench_8c_e66f6b31b5ad750f1fe042a706a4e3d4}{
+\index{membench.c@{membench.c}!main@{main}}
+\index{main@{main}!membench.c@{membench.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int main ()}}
+\label{membench_8c_e66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+
+
+\subsection{Documentación de las variables}
+\hypertarget{membench_8c_c9426a6536abee994e66805415396021}{
+\index{membench.c@{membench.c}!x@{x}}
+\index{x@{x}!membench.c@{membench.c}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int {\bf x}\mbox{[}CACHE\_\-MAX\mbox{]}}}
+\label{membench_8c_c9426a6536abee994e66805415396021}
+
+

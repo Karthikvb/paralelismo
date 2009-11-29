@@ -1,0 +1,233 @@
+\hypertarget{matrix_8cpp}{
+\section{Referencia del Archivo matrix.cpp}
+\label{matrix_8cpp}\index{matrix.cpp@{matrix.cpp}}
+}
+{\tt \#include \char`\"{}matrix.hpp\char`\"{}}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$stdio.h$>$}\par
+\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+void \hyperlink{matrix_8cpp_ce655f7924192a1d0057a201a61c5a9a}{fill} (int $\ast$m, int nfilas, int ncolumnas)
+\begin{CompactList}\small\item\em Rellena una matriz de enteros de tamaño a$\ast$b con valores aleatorios. \item\end{CompactList}\item 
+void \hyperlink{matrix_8cpp_960d660f7d97eaf0853ed082f2aafb5f}{fill} (int $\ast$m, int n)
+\begin{CompactList}\small\item\em Rellena una matriz de enteros de tamaño n$\ast$n con valores aleatorios. \item\end{CompactList}\item 
+void \hyperlink{matrix_8cpp_734ff3dfb4c93f64a9508b208b368d4b}{fill} (float $\ast$m, int nfilas, int ncolumnas)
+\begin{CompactList}\small\item\em Rellena una matriz de enteros de tamaño a$\ast$b con valores aleatorios. \item\end{CompactList}\item 
+void \hyperlink{matrix_8cpp_f2aad0872c74f28ba32e4adce10c0bce}{fill} (float $\ast$m, int n)
+\begin{CompactList}\small\item\em Rellena una matriz de float de tamaño n$\ast$n con valores aleatorios. \item\end{CompactList}\item 
+void \hyperlink{matrix_8cpp_4a14b28fa02c6b85891a7a444215e21d}{fill} (double $\ast$m, int nfilas, int ncolumnas)
+\begin{CompactList}\small\item\em Rellena una matriz de enteros de tamaño a$\ast$b con valores aleatorios. \item\end{CompactList}\item 
+void \hyperlink{matrix_8cpp_eddb019c02402a7b49d8175a8a81dc69}{fill} (double $\ast$m, int n)
+\begin{CompactList}\small\item\em Rellena una matriz de double de tamaño n$\ast$n con valores aleatorios. \item\end{CompactList}\item 
+void \hyperlink{matrix_8cpp_10b54def7437d46879bf1866945e4870}{fill} (\hyperlink{classComplex}{Complex} $\ast$m, int nfilas, int ncolumnas)
+\begin{CompactList}\small\item\em Rellena una matriz de enteros de tamaño a$\ast$b con valores aleatorios. \item\end{CompactList}\item 
+void \hyperlink{matrix_8cpp_60f7b3e6a0948be9604c1747cf70b0da}{fill} (\hyperlink{classComplex}{Complex} $\ast$m, int n)
+\begin{CompactList}\small\item\em Rellena una matriz de complex de tamaño n$\ast$n con valores aleatorios. \item\end{CompactList}\item 
+void \hyperlink{matrix_8cpp_51b09ca4e33632d2a810f0c416c66fae}{fill} (complex$<$ double $>$ $\ast$m, int n)
+\begin{CompactList}\small\item\em Rellena una matriz de complex de tamaño n$\ast$n con valores aleatorios. \item\end{CompactList}\item 
+void \hyperlink{matrix_8cpp_8c3af8efd52a288d1edb2adc29779f91}{fill} (complex$<$ double $>$ $\ast$m, int nfilas, int ncolumnas)
+\begin{CompactList}\small\item\em Rellena una matriz de enteros de tamaño a$\ast$b con valores aleatorios. \item\end{CompactList}\item 
+int $\ast$ \hyperlink{matrix_8cpp_1759ff064f51f940889054bc9547c4a2}{crea\_\-matrix} (int $\ast$m, int n)
+\begin{CompactList}\small\item\em Devuelve un puntero a una matrix de enteros de tamaño n$\ast$n. \item\end{CompactList}\item 
+int $\ast$ \hyperlink{matrix_8cpp_99ece40d7ecc456e93e710a4dac14232}{crea\_\-matrix} (int $\ast$m, int a, int b)
+\begin{CompactList}\small\item\em Devuelve un puntero a una matrix de enteros de tamaño a$\ast$b. \item\end{CompactList}\item 
+float $\ast$ \hyperlink{matrix_8cpp_3e6f77875493c22b93fee1454b1795c2}{crea\_\-matrix} (float $\ast$m, int n)
+\begin{CompactList}\small\item\em Devuelve un puntero a una matrix de float de tamaño n$\ast$n. \item\end{CompactList}\item 
+float $\ast$ \hyperlink{matrix_8cpp_3a4194ccba6b09aa39922990f90ae82d}{crea\_\-matrix} (float $\ast$m, int a, int b)
+\begin{CompactList}\small\item\em Devuelve un puntero a una matrix de float de tamaño a$\ast$b. \item\end{CompactList}\item 
+double $\ast$ \hyperlink{matrix_8cpp_e32f8bf0a3e49f61a2dc26ace871a50a}{crea\_\-matrix} (double $\ast$m, int n)
+\begin{CompactList}\small\item\em Devuelve un puntero a una matrix de double de tamaño n$\ast$n. \item\end{CompactList}\item 
+double $\ast$ \hyperlink{matrix_8cpp_f1da4bdd75a2f501da4093c55c6c3186}{crea\_\-matrix} (double $\ast$m, int a, int b)
+\begin{CompactList}\small\item\em Devuelve un puntero a una matrix de double de tamaño a$\ast$b. \item\end{CompactList}\item 
+\hyperlink{classComplex}{Complex} $\ast$ \hyperlink{matrix_8cpp_d59869463af34bc49b6db2889624fe12}{crea\_\-matrix} (\hyperlink{classComplex}{Complex} $\ast$m, int n)
+\begin{CompactList}\small\item\em Devuelve un puntero a una matrix de complex de tamaño n$\ast$n. \item\end{CompactList}\item 
+\hyperlink{classComplex}{Complex} $\ast$ \hyperlink{matrix_8cpp_70d19e4f47077512c5476b667e0a5ca1}{crea\_\-matrix} (\hyperlink{classComplex}{Complex} $\ast$m, int a, int b)
+\begin{CompactList}\small\item\em Devuelve un puntero a una matrix de complex de tamaño a$\ast$b. \item\end{CompactList}\item 
+complex$<$ double $>$ $\ast$ \hyperlink{matrix_8cpp_e3bb993cc0b8f7808fa2490b7790b466}{crea\_\-matrix} (complex$<$ double $>$ $\ast$m, int n)
+\begin{CompactList}\small\item\em Devuelve un puntero a una matrix de complex de tamaño n$\ast$n. \item\end{CompactList}\item 
+complex$<$ double $>$ $\ast$ \hyperlink{matrix_8cpp_b31aa588184c32cc893f6281e0c0a103}{crea\_\-matrix} (complex$<$ double $>$ $\ast$m, int a, int b)
+\begin{CompactList}\small\item\em Devuelve un puntero a una matrix de complex de tamaño a$\ast$b. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Documentación de las funciones}
+\hypertarget{matrix_8cpp_b31aa588184c32cc893f6281e0c0a103}{
+\index{matrix.cpp@{matrix.cpp}!crea\_\-matrix@{crea\_\-matrix}}
+\index{crea\_\-matrix@{crea\_\-matrix}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}complex$<$double$>$$\ast$ crea\_\-matrix (complex$<$ double $>$ $\ast$ {\em m}, \/  int {\em a}, \/  int {\em b})}}
+\label{matrix_8cpp_b31aa588184c32cc893f6281e0c0a103}
+
+
+Devuelve un puntero a una matrix de complex de tamaño a$\ast$b. 
+
+\hypertarget{matrix_8cpp_e3bb993cc0b8f7808fa2490b7790b466}{
+\index{matrix.cpp@{matrix.cpp}!crea\_\-matrix@{crea\_\-matrix}}
+\index{crea\_\-matrix@{crea\_\-matrix}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}complex$<$double$>$$\ast$ crea\_\-matrix (complex$<$ double $>$ $\ast$ {\em m}, \/  int {\em n})}}
+\label{matrix_8cpp_e3bb993cc0b8f7808fa2490b7790b466}
+
+
+Devuelve un puntero a una matrix de complex de tamaño n$\ast$n. 
+
+\hypertarget{matrix_8cpp_70d19e4f47077512c5476b667e0a5ca1}{
+\index{matrix.cpp@{matrix.cpp}!crea\_\-matrix@{crea\_\-matrix}}
+\index{crea\_\-matrix@{crea\_\-matrix}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex}$\ast$ crea\_\-matrix ({\bf Complex} $\ast$ {\em m}, \/  int {\em a}, \/  int {\em b})}}
+\label{matrix_8cpp_70d19e4f47077512c5476b667e0a5ca1}
+
+
+Devuelve un puntero a una matrix de complex de tamaño a$\ast$b. 
+
+\hypertarget{matrix_8cpp_d59869463af34bc49b6db2889624fe12}{
+\index{matrix.cpp@{matrix.cpp}!crea\_\-matrix@{crea\_\-matrix}}
+\index{crea\_\-matrix@{crea\_\-matrix}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Complex}$\ast$ crea\_\-matrix ({\bf Complex} $\ast$ {\em m}, \/  int {\em n})}}
+\label{matrix_8cpp_d59869463af34bc49b6db2889624fe12}
+
+
+Devuelve un puntero a una matrix de complex de tamaño n$\ast$n. 
+
+\hypertarget{matrix_8cpp_f1da4bdd75a2f501da4093c55c6c3186}{
+\index{matrix.cpp@{matrix.cpp}!crea\_\-matrix@{crea\_\-matrix}}
+\index{crea\_\-matrix@{crea\_\-matrix}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ crea\_\-matrix (double $\ast$ {\em m}, \/  int {\em a}, \/  int {\em b})}}
+\label{matrix_8cpp_f1da4bdd75a2f501da4093c55c6c3186}
+
+
+Devuelve un puntero a una matrix de double de tamaño a$\ast$b. 
+
+\hypertarget{matrix_8cpp_e32f8bf0a3e49f61a2dc26ace871a50a}{
+\index{matrix.cpp@{matrix.cpp}!crea\_\-matrix@{crea\_\-matrix}}
+\index{crea\_\-matrix@{crea\_\-matrix}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ crea\_\-matrix (double $\ast$ {\em m}, \/  int {\em n})}}
+\label{matrix_8cpp_e32f8bf0a3e49f61a2dc26ace871a50a}
+
+
+Devuelve un puntero a una matrix de double de tamaño n$\ast$n. 
+
+\hypertarget{matrix_8cpp_3a4194ccba6b09aa39922990f90ae82d}{
+\index{matrix.cpp@{matrix.cpp}!crea\_\-matrix@{crea\_\-matrix}}
+\index{crea\_\-matrix@{crea\_\-matrix}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ crea\_\-matrix (float $\ast$ {\em m}, \/  int {\em a}, \/  int {\em b})}}
+\label{matrix_8cpp_3a4194ccba6b09aa39922990f90ae82d}
+
+
+Devuelve un puntero a una matrix de float de tamaño a$\ast$b. 
+
+\hypertarget{matrix_8cpp_3e6f77875493c22b93fee1454b1795c2}{
+\index{matrix.cpp@{matrix.cpp}!crea\_\-matrix@{crea\_\-matrix}}
+\index{crea\_\-matrix@{crea\_\-matrix}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ crea\_\-matrix (float $\ast$ {\em m}, \/  int {\em n})}}
+\label{matrix_8cpp_3e6f77875493c22b93fee1454b1795c2}
+
+
+Devuelve un puntero a una matrix de float de tamaño n$\ast$n. 
+
+\hypertarget{matrix_8cpp_99ece40d7ecc456e93e710a4dac14232}{
+\index{matrix.cpp@{matrix.cpp}!crea\_\-matrix@{crea\_\-matrix}}
+\index{crea\_\-matrix@{crea\_\-matrix}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ crea\_\-matrix (int $\ast$ {\em m}, \/  int {\em a}, \/  int {\em b})}}
+\label{matrix_8cpp_99ece40d7ecc456e93e710a4dac14232}
+
+
+Devuelve un puntero a una matrix de enteros de tamaño a$\ast$b. 
+
+\hypertarget{matrix_8cpp_1759ff064f51f940889054bc9547c4a2}{
+\index{matrix.cpp@{matrix.cpp}!crea\_\-matrix@{crea\_\-matrix}}
+\index{crea\_\-matrix@{crea\_\-matrix}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ crea\_\-matrix (int $\ast$ {\em m}, \/  int {\em n})}}
+\label{matrix_8cpp_1759ff064f51f940889054bc9547c4a2}
+
+
+Devuelve un puntero a una matrix de enteros de tamaño n$\ast$n. 
+
+\hypertarget{matrix_8cpp_8c3af8efd52a288d1edb2adc29779f91}{
+\index{matrix.cpp@{matrix.cpp}!fill@{fill}}
+\index{fill@{fill}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill (complex$<$ double $>$ $\ast$ {\em m}, \/  int {\em nfilas}, \/  int {\em ncolumnas})}}
+\label{matrix_8cpp_8c3af8efd52a288d1edb2adc29779f91}
+
+
+Rellena una matriz de enteros de tamaño a$\ast$b con valores aleatorios. 
+
+\hypertarget{matrix_8cpp_51b09ca4e33632d2a810f0c416c66fae}{
+\index{matrix.cpp@{matrix.cpp}!fill@{fill}}
+\index{fill@{fill}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill (complex$<$ double $>$ $\ast$ {\em m}, \/  int {\em n})}}
+\label{matrix_8cpp_51b09ca4e33632d2a810f0c416c66fae}
+
+
+Rellena una matriz de complex de tamaño n$\ast$n con valores aleatorios. 
+
+\hypertarget{matrix_8cpp_60f7b3e6a0948be9604c1747cf70b0da}{
+\index{matrix.cpp@{matrix.cpp}!fill@{fill}}
+\index{fill@{fill}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill ({\bf Complex} $\ast$ {\em m}, \/  int {\em n})}}
+\label{matrix_8cpp_60f7b3e6a0948be9604c1747cf70b0da}
+
+
+Rellena una matriz de complex de tamaño n$\ast$n con valores aleatorios. 
+
+\hypertarget{matrix_8cpp_10b54def7437d46879bf1866945e4870}{
+\index{matrix.cpp@{matrix.cpp}!fill@{fill}}
+\index{fill@{fill}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill ({\bf Complex} $\ast$ {\em m}, \/  int {\em nfilas}, \/  int {\em ncolumnas})}}
+\label{matrix_8cpp_10b54def7437d46879bf1866945e4870}
+
+
+Rellena una matriz de enteros de tamaño a$\ast$b con valores aleatorios. 
+
+\hypertarget{matrix_8cpp_eddb019c02402a7b49d8175a8a81dc69}{
+\index{matrix.cpp@{matrix.cpp}!fill@{fill}}
+\index{fill@{fill}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill (double $\ast$ {\em m}, \/  int {\em n})}}
+\label{matrix_8cpp_eddb019c02402a7b49d8175a8a81dc69}
+
+
+Rellena una matriz de double de tamaño n$\ast$n con valores aleatorios. 
+
+\hypertarget{matrix_8cpp_4a14b28fa02c6b85891a7a444215e21d}{
+\index{matrix.cpp@{matrix.cpp}!fill@{fill}}
+\index{fill@{fill}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill (double $\ast$ {\em m}, \/  int {\em nfilas}, \/  int {\em ncolumnas})}}
+\label{matrix_8cpp_4a14b28fa02c6b85891a7a444215e21d}
+
+
+Rellena una matriz de enteros de tamaño a$\ast$b con valores aleatorios. 
+
+\hypertarget{matrix_8cpp_f2aad0872c74f28ba32e4adce10c0bce}{
+\index{matrix.cpp@{matrix.cpp}!fill@{fill}}
+\index{fill@{fill}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill (float $\ast$ {\em m}, \/  int {\em n})}}
+\label{matrix_8cpp_f2aad0872c74f28ba32e4adce10c0bce}
+
+
+Rellena una matriz de float de tamaño n$\ast$n con valores aleatorios. 
+
+\hypertarget{matrix_8cpp_734ff3dfb4c93f64a9508b208b368d4b}{
+\index{matrix.cpp@{matrix.cpp}!fill@{fill}}
+\index{fill@{fill}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill (float $\ast$ {\em m}, \/  int {\em nfilas}, \/  int {\em ncolumnas})}}
+\label{matrix_8cpp_734ff3dfb4c93f64a9508b208b368d4b}
+
+
+Rellena una matriz de enteros de tamaño a$\ast$b con valores aleatorios. 
+
+\hypertarget{matrix_8cpp_960d660f7d97eaf0853ed082f2aafb5f}{
+\index{matrix.cpp@{matrix.cpp}!fill@{fill}}
+\index{fill@{fill}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill (int $\ast$ {\em m}, \/  int {\em n})}}
+\label{matrix_8cpp_960d660f7d97eaf0853ed082f2aafb5f}
+
+
+Rellena una matriz de enteros de tamaño n$\ast$n con valores aleatorios. 
+
+\hypertarget{matrix_8cpp_ce655f7924192a1d0057a201a61c5a9a}{
+\index{matrix.cpp@{matrix.cpp}!fill@{fill}}
+\index{fill@{fill}!matrix.cpp@{matrix.cpp}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void fill (int $\ast$ {\em m}, \/  int {\em nfilas}, \/  int {\em ncolumnas})}}
+\label{matrix_8cpp_ce655f7924192a1d0057a201a61c5a9a}
+
+
+Rellena una matriz de enteros de tamaño a$\ast$b con valores aleatorios. 
+
