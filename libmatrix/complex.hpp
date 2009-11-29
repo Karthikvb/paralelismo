@@ -1,29 +1,35 @@
 
 #include <iostream.h>
+
+/**
+  Clase que implementa el tipo complejo
+*/
 class Complex {
  protected:
   double re, im;
  public:
+  Complex();
+  Complex(double);
   Complex(double , double );
   Complex(const Complex &c);
-  //asignacion:
+  /**asignacion:*/
   Complex& operator=(const Complex &c);
-  //suma: complejo+complejo
+  /**suma: complejo+complejo*/
   Complex operator+(const Complex &c) const;
-  //suma: double+complejo
+  /**suma: double+complejo*/
   friend Complex operator+(double d, const Complex &c);
-  //suma y asigna: complejo+=complejo
+  /**suma y asigna: complejo+=complejo*/
   Complex operator+=(const Complex &c) const;
-  //resta: complejo-complejo
+  /**resta: complejo-complejo*/
   Complex operator-(const Complex &c) const;
-  //resta: double-complejo
+  /**resta: double-complejo*/
   friend Complex operator-(double d, const Complex &c);
-  //producto: complejo*complejo
+  /**producto: complejo*complejo*/
   Complex operator*(const Complex &c) const;
-  //producto: double*complejo
+  /**producto: double*complejo*/
   friend Complex operator*(double d, const Complex &c);
-  //producto: complejo*complejo
+  /**producto: complejo*complejo*/
   Complex operator-() const;
-  //operador de salida:
+  /**operador de salida:*/
   friend ostream & operator<<(ostream &o, const Complex &c);
 };

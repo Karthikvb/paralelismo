@@ -17,24 +17,53 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+
 #ifndef _MATRIX_HPP_
 #define _MATRIX_HPP_
-
+#include <complex.h>
+#include <math.h>
+#include <stdio.h>
 #include "complex.hpp"
-int * crea_matrix(int *,int);
-int * crea_matrix(int *,int,int);
-float * crea_matrix(float *,int);
-float * crea_matrix(float *,int,int);
-double * crea_matrix(double *,int);
-double * crea_matrix(double *,int,int);
-Complex * crea_matrix(Complex *,int);
-Complex * crea_matrix(Complex *,int,int);
-void fill (int *,int);
-void fill (int *,int,int);
-void fill (float *,int);
-void fill (float *,int,int);
-void fill (double *,int);
-void fill (double *,int,int);
-void fill (Complex *,int);
-void fill (Complex *,int,int);
+
+/**Devuelve un puntero a una matrix de enteros de tamaño n*n */
+int * crea_matrix(int *,int n);
+/**Devuelve un puntero a una matrix de enteros de tamaño a*b */
+int * crea_matrix(int *,int a,int b);
+/**Devuelve un puntero a una matrix de float de tamaño n*n */
+float * crea_matrix(float *,int n);
+/**Devuelve un puntero a una matrix de float de tamaño a*b */
+float * crea_matrix(float *,int a,int b);
+/**Devuelve un puntero a una matrix de double de tamaño n*n*/
+double * crea_matrix(double *,int n);
+/**Devuelve un puntero a una matrix de double de tamaño a*b */
+double * crea_matrix(double *,int a,int b);
+/**Devuelve un puntero a una matrix de complex de tamaño n*n*/
+Complex * crea_matrix(Complex *,int n);
+/**Devuelve un puntero a una matrix de complex de tamaño a*b */
+Complex * crea_matrix(Complex *,int a,int b);
+/**Devuelve un puntero a una matrix de complex de tamaño n*n*/
+complex<double> * crea_matrix(complex<double> *,int n);
+/**Devuelve un puntero a una matrix de complex de tamaño a*b */
+complex<double> * crea_matrix(complex<double> *,int a,int b);
+/** Rellena una matriz de enteros de tamaño n*n con valores aleatorios */
+void fill (int *,int n);
+/** Rellena una matriz de enteros de tamaño a*b con valores aleatorios */
+void fill (int *,int a,int b);
+/** Rellena una matriz de float de tamaño n*n con valores aleatorios */
+void fill (float *,int n);
+/** Rellena una matriz de enteros de tamaño a*b con valores aleatorios */
+void fill (float *,int a,int b);
+/** Rellena una matriz de double de tamaño n*n con valores aleatorios */
+void fill (double *,int n);
+/** Rellena una matriz de enteros de tamaño a*b con valores aleatorios */
+void fill (double *,int a,int b);
+/** Rellena una matriz de complex de tamaño n*n con valores aleatorios */
+void fill (Complex *,int n);
+/** Rellena una matriz de enteros de tamaño a*b con valores aleatorios */
+void fill (Complex *,int a,int b);
+/** Rellena una matriz de complex de tamaño n*n con valores aleatorios */
+void fill (complex<double> *,int n);
+/** Rellena una matriz de enteros de tamaño a*b con valores aleatorios */
+void fill (complex<double>  *,int a,int b);
+
 #endif // _MATRIX_HPP_
