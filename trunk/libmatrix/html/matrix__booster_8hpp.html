@@ -1,0 +1,2337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>matrix_booster: Referencia del Archivo matrix_booster.hpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia del Archivo matrix_booster.hpp</h1><code>#include &quot;<a class="el" href="block_8h-source.html">block.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="matrix_8hpp-source.html">matrix.hpp</a>&quot;</code><br>
+<code>#include &lt;stdlib.h&gt;</code><br>
+<code>#include &lt;stdio.h&gt;</code><br>
+<code>#include &lt;string.h&gt;</code><br>
+<code>#include &lt;float.h&gt;</code><br>
+<code>#include &lt;math.h&gt;</code><br>
+<code>#include &lt;sys/time.h&gt;</code><br>
+<code>#include &lt;mkl.h&gt;</code><br>
+
+<p>
+<a href="matrix__booster_8hpp-source.html">Ir al código fuente de este archivo.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#c3fe40c07e1353c8546655a1623e8119">start_clock</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inicia la cuenta del reloj.  <a href="#c3fe40c07e1353c8546655a1623e8119"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">double&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#75af42ce2771215f2452f431786fa41e">end_clock</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Finaliza la cuenta del reloj y devuelve el tiempo transcurrido.  <a href="#75af42ce2771215f2452f431786fa41e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#7c39db9b116a4ce60de7deacd3f31359">naive_multiplymatrix</a> (int *A, int *B, int *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#faa404afe85f8e86c9af58080135a6dd">naive_multiplymatrix_openmp</a> (int *A, int *B, int *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#e85c16a5cba16b226afb40600a2b4aae">blocked_multiplymatrix</a> (int *A, int *B, int *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#5bcf7898c16999b8839d826850d2f0f0">blocked_multiplymatrix_openmp</a> (int *A, int *B, int *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#1017d9a57fc05d403227782915b9f178">naive_multiplymatrix</a> (float *A, float *B, float *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#3555546223c7df2fff075ec88d5fe779">naive_multiplymatrix_openmp</a> (float *A, float *B, float *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#f1e03f4936fda7e121cafdaa1d11e665">blocked_multiplymatrix</a> (float *A, float *B, float *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#61b8fc4f1cd0cbac7ca115c13ec50c3c">blocked_multiplymatrix_openmp</a> (float *A, float *B, float *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#afaedffbf4718632f487169e39a011ae">naive_multiplymatrix</a> (double *A, double *B, double *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#cc062a6e53598cc737b40dff3e163716">naive_multiplymatrix_openmp</a> (double *A, double *B, double *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#76673e4a82765e7a065abefe1626ec71">blocked_multiplymatrix</a> (double *A, double *B, double *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#a1c0ee20f8387a45547cd2cf85c0a9a0">blocked_multiplymatrix_openmp</a> (double *A, double *B, double *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#3ec8abae7b7ba6d2f0ac2dd0635ba831">naive_multiplymatrixc</a> (<a class="el" href="classComplex.html">Complex</a> *A, <a class="el" href="classComplex.html">Complex</a> *B, <a class="el" href="classComplex.html">Complex</a> *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#01761158be438af17d977f534a487bb4">naive_multiplymatrix_openmp</a> (<a class="el" href="classComplex.html">Complex</a> *A, <a class="el" href="classComplex.html">Complex</a> *B, <a class="el" href="classComplex.html">Complex</a> *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#67cca5dbfa464b929b8b1c48be4bccb0">blocked_multiplymatrix</a> (<a class="el" href="classComplex.html">Complex</a> *A, <a class="el" href="classComplex.html">Complex</a> *B, <a class="el" href="classComplex.html">Complex</a> *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#f78cb7a68777c8d8ab449f771740d002">blocked_multiplymatrix_openmp</a> (<a class="el" href="classComplex.html">Complex</a> *A, <a class="el" href="classComplex.html">Complex</a> *B, <a class="el" href="classComplex.html">Complex</a> *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#fa665677ee7b09a937d1f81bbe26f9ed">naive_multiplymatrix</a> (complex&lt; double &gt; *A, complex&lt; double &gt; *B, complex&lt; double &gt; *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#a55c2b57ac6c8cb7fe0b79503843a112">naive_multiplymatrix_openmp</a> (complex&lt; double &gt; *A, complex&lt; double &gt; *B, complex&lt; double &gt; *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#82070ca217d9de78eab4977b26ec4d95">blocked_multiplymatrix</a> (complex&lt; double &gt; *A, complex&lt; double &gt; *B, complex&lt; double &gt; *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#5adf5d0def33c4b6f7f06a85390ffa3e">blocked_multiplymatrix_openmp</a> (complex&lt; double &gt; *A, complex&lt; double &gt; *B, complex&lt; double &gt; *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#780020279899dffc597344ca8c8ec20e">prueba_int</a> (int m, int n, int o, int p, int q, int r)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de enteros de los tamaños especificados por parámetro.  <a href="#780020279899dffc597344ca8c8ec20e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#271dc4e9712892b2373739e30d48819b">prueba_float</a> (int m, int n, int o, int p, int q, int r)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de float de los tamaños especificados por parámetro.  <a href="#271dc4e9712892b2373739e30d48819b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#574e17ef400289387dacc36890852f5d">prueba_double</a> (int m, int n, int o, int p, int q, int r)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de double de los tamaños especificados por parámetro.  <a href="#574e17ef400289387dacc36890852f5d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#f24e32d674adc1bd951cc0fac160e40a">prueba_Complex</a> (int m, int n, int o, int p, int q, int r)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de complejos de los tamaños especificados por parámetro.  <a href="#f24e32d674adc1bd951cc0fac160e40a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#c99dee2733b2d31b71a78b5dcff4f5b3">prueba_stdcomplex</a> (int m, int n, int o, int p, int q, int r)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de std::complex&lt;double&gt; de los tamaños especificados por parámetro.  <a href="#c99dee2733b2d31b71a78b5dcff4f5b3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#f79d216305d227ebb80b0e0212955a34">prueba_int</a> (int n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de enteros de los tamaños especificados por parámetro.  <a href="#f79d216305d227ebb80b0e0212955a34"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#e271335341fb1b8debadf93c4d89a565">prueba_float</a> (int n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de float de los tamaños especificados por parámetro.  <a href="#e271335341fb1b8debadf93c4d89a565"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#20ee031ea933207c342c5bf0eee235e3">prueba_double</a> (int n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de double de los tamaños especificados por parámetro.  <a href="#20ee031ea933207c342c5bf0eee235e3"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#49a58402d622821b2eeaba99c838c67b">prueba_Complex</a> (int n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de complejos de los tamaños especificados por parámetro.  <a href="#49a58402d622821b2eeaba99c838c67b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="matrix__booster_8hpp.html#ada57697934df542cfa23540b1548efd">prueba_stdcomplex</a> (int n)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de std::complex&lt;double&gt; de los tamaños especificados por parámetro.  <a href="#ada57697934df542cfa23540b1548efd"></a><br></td></tr>
+</table>
+<hr><h2>Documentación de las funciones</h2>
+<a class="anchor" name="82070ca217d9de78eab4977b26ec4d95"></a><!-- doxytag: member="matrix_booster.hpp::blocked_multiplymatrix" ref="82070ca217d9de78eab4977b26ec4d95" args="(complex&lt; double &gt; *A, complex&lt; double &gt; *B, complex&lt; double &gt; *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de std::complex&lt;double&gt; A y B y los suma a la matriz C mediante el metodo blocked <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="67cca5dbfa464b929b8b1c48be4bccb0"></a><!-- doxytag: member="matrix_booster.hpp::blocked_multiplymatrix" ref="67cca5dbfa464b929b8b1c48be4bccb0" args="(Complex *A, Complex *B, Complex *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de <a class="el" href="classComplex.html" title="Clase que implementa el tipo complejo.">Complex</a> A y B y los suma a la matriz C mediante el metodo blocked <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="76673e4a82765e7a065abefe1626ec71"></a><!-- doxytag: member="matrix_booster.hpp::blocked_multiplymatrix" ref="76673e4a82765e7a065abefe1626ec71" args="(double *A, double *B, double *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de double A y B y los suma a la matriz C mediante el metodo blocked <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f1e03f4936fda7e121cafdaa1d11e665"></a><!-- doxytag: member="matrix_booster.hpp::blocked_multiplymatrix" ref="f1e03f4936fda7e121cafdaa1d11e665" args="(float *A, float *B, float *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de float A y B y los suma a la matriz C mediante el metodo blocked <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e85c16a5cba16b226afb40600a2b4aae"></a><!-- doxytag: member="matrix_booster.hpp::blocked_multiplymatrix" ref="e85c16a5cba16b226afb40600a2b4aae" args="(int *A, int *B, int *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de enteros A y B y los suma a la matriz C mediante el metodo blocked <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5adf5d0def33c4b6f7f06a85390ffa3e"></a><!-- doxytag: member="matrix_booster.hpp::blocked_multiplymatrix_openmp" ref="5adf5d0def33c4b6f7f06a85390ffa3e" args="(complex&lt; double &gt; *A, complex&lt; double &gt; *B, complex&lt; double &gt; *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de std::complex&lt;double&gt; A y B y los suma a la matriz C mediante el metodo blocked con paralelismo mediante openmp <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f78cb7a68777c8d8ab449f771740d002"></a><!-- doxytag: member="matrix_booster.hpp::blocked_multiplymatrix_openmp" ref="f78cb7a68777c8d8ab449f771740d002" args="(Complex *A, Complex *B, Complex *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de <a class="el" href="classComplex.html" title="Clase que implementa el tipo complejo.">Complex</a> A y B y los suma a la matriz C mediante el metodo blocked con paralelismo mediante openmp <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a1c0ee20f8387a45547cd2cf85c0a9a0"></a><!-- doxytag: member="matrix_booster.hpp::blocked_multiplymatrix_openmp" ref="a1c0ee20f8387a45547cd2cf85c0a9a0" args="(double *A, double *B, double *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de double A y B y los suma a la matriz C mediante el metodo blocked con paralelismo mediante openmp <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="61b8fc4f1cd0cbac7ca115c13ec50c3c"></a><!-- doxytag: member="matrix_booster.hpp::blocked_multiplymatrix_openmp" ref="61b8fc4f1cd0cbac7ca115c13ec50c3c" args="(float *A, float *B, float *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de float A y B y los suma a la matriz C mediante el metodo blocked con paralelismo mediante openmp <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="5bcf7898c16999b8839d826850d2f0f0"></a><!-- doxytag: member="matrix_booster.hpp::blocked_multiplymatrix_openmp" ref="5bcf7898c16999b8839d826850d2f0f0" args="(int *A, int *B, int *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int blocked_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de enteros A y B y los suma a la matriz C mediante el metodo blocked con paralelismo mediante openmp <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="75af42ce2771215f2452f431786fa41e"></a><!-- doxytag: member="matrix_booster.hpp::end_clock" ref="75af42ce2771215f2452f431786fa41e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double end_clock           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Finaliza la cuenta del reloj y devuelve el tiempo transcurrido. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="fa665677ee7b09a937d1f81bbe26f9ed"></a><!-- doxytag: member="matrix_booster.hpp::naive_multiplymatrix" ref="fa665677ee7b09a937d1f81bbe26f9ed" args="(complex&lt; double &gt; *A, complex&lt; double &gt; *B, complex&lt; double &gt; *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de std::complex&lt;double&gt; A y B y los suma a la matriz C mediante el metodo naive <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="afaedffbf4718632f487169e39a011ae"></a><!-- doxytag: member="matrix_booster.hpp::naive_multiplymatrix" ref="afaedffbf4718632f487169e39a011ae" args="(double *A, double *B, double *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de double A y B y los suma a la matriz C mediante el metodo naive <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1017d9a57fc05d403227782915b9f178"></a><!-- doxytag: member="matrix_booster.hpp::naive_multiplymatrix" ref="1017d9a57fc05d403227782915b9f178" args="(float *A, float *B, float *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de float A y B y los suma a la matriz C mediante el metodo naive <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="7c39db9b116a4ce60de7deacd3f31359"></a><!-- doxytag: member="matrix_booster.hpp::naive_multiplymatrix" ref="7c39db9b116a4ce60de7deacd3f31359" args="(int *A, int *B, int *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix           </td>
+          <td>(</td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de enteros A y B y los suma a la matriz C mediante el metodo naive. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>intnfilasc</em>&nbsp;</td><td>Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>intncolumnasc</em>&nbsp;</td><td>Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a55c2b57ac6c8cb7fe0b79503843a112"></a><!-- doxytag: member="matrix_booster.hpp::naive_multiplymatrix_openmp" ref="a55c2b57ac6c8cb7fe0b79503843a112" args="(complex&lt; double &gt; *A, complex&lt; double &gt; *B, complex&lt; double &gt; *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">complex&lt; double &gt; *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de std::complex&lt;double&gt; A y B y los suma a la matriz C mediante el metodo naive con paralelismo mediante openmp <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="01761158be438af17d977f534a487bb4"></a><!-- doxytag: member="matrix_booster.hpp::naive_multiplymatrix_openmp" ref="01761158be438af17d977f534a487bb4" args="(Complex *A, Complex *B, Complex *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de <a class="el" href="classComplex.html" title="Clase que implementa el tipo complejo.">Complex</a> A y B y los suma a la matriz C mediante el metodo naive con paralelismo mediante openmp <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cc062a6e53598cc737b40dff3e163716"></a><!-- doxytag: member="matrix_booster.hpp::naive_multiplymatrix_openmp" ref="cc062a6e53598cc737b40dff3e163716" args="(double *A, double *B, double *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de double A y B y los suma a la matriz C mediante el metodo naive con paralelismo mediante openmp <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3555546223c7df2fff075ec88d5fe779"></a><!-- doxytag: member="matrix_booster.hpp::naive_multiplymatrix_openmp" ref="3555546223c7df2fff075ec88d5fe779" args="(float *A, float *B, float *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de float A y B y los suma a la matriz C mediante el metodo naive con paralelismo mediante openmp <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="faa404afe85f8e86c9af58080135a6dd"></a><!-- doxytag: member="matrix_booster.hpp::naive_multiplymatrix_openmp" ref="faa404afe85f8e86c9af58080135a6dd" args="(int *A, int *B, int *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrix_openmp           </td>
+          <td>(</td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de enteros A y B y los suma a la matriz C mediante el metodo naive con paralelismo mediante openmp. <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="3ec8abae7b7ba6d2f0ac2dd0635ba831"></a><!-- doxytag: member="matrix_booster.hpp::naive_multiplymatrixc" ref="3ec8abae7b7ba6d2f0ac2dd0635ba831" args="(Complex *A, Complex *B, Complex *C, int nfilasa, int ncolumnasa, int nfilasb, int ncolumnasb, int nfilasc, int ncolumnasc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int naive_multiplymatrixc           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classComplex.html">Complex</a> *&nbsp;</td>
+          <td class="paramname"> <em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nfilasc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ncolumnasc</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza el producto de matrices de <a class="el" href="classComplex.html" title="Clase que implementa el tipo complejo.">Complex</a> A y B y los suma a la matriz C mediante el metodo naive <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*A Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*B Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>float</em>&nbsp;</td><td>*C Puntero a matriz de enteros. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasa Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasa Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasb Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasb Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>nfilasc Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>ncolumnasc Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Devuelve:</b></dt><dd>0 si Ok <p>
+1 si los tamaños de las matrices son incompatibles. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="49a58402d622821b2eeaba99c838c67b"></a><!-- doxytag: member="matrix_booster.hpp::prueba_Complex" ref="49a58402d622821b2eeaba99c838c67b" args="(int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prueba_Complex           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de complejos de los tamaños especificados por parámetro. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>n Dimensión de las matrices cuadradas a multiplicar </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f24e32d674adc1bd951cc0fac160e40a"></a><!-- doxytag: member="matrix_booster.hpp::prueba_Complex" ref="f24e32d674adc1bd951cc0fac160e40a" args="(int m, int n, int o, int p, int q, int r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prueba_Complex           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>r</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de complejos de los tamaños especificados por parámetro. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>m Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>n Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>o Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>p Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>q Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>r Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="20ee031ea933207c342c5bf0eee235e3"></a><!-- doxytag: member="matrix_booster.hpp::prueba_double" ref="20ee031ea933207c342c5bf0eee235e3" args="(int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prueba_double           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de double de los tamaños especificados por parámetro. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>n Dimensión de las matrices cuadradas a multiplicar </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="574e17ef400289387dacc36890852f5d"></a><!-- doxytag: member="matrix_booster.hpp::prueba_double" ref="574e17ef400289387dacc36890852f5d" args="(int m, int n, int o, int p, int q, int r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prueba_double           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>r</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de double de los tamaños especificados por parámetro. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>m Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>n Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>o Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>p Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>q Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>r Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="e271335341fb1b8debadf93c4d89a565"></a><!-- doxytag: member="matrix_booster.hpp::prueba_float" ref="e271335341fb1b8debadf93c4d89a565" args="(int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prueba_float           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de float de los tamaños especificados por parámetro. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>n Dimensión de las matrices cuadradas a multiplicar </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="271dc4e9712892b2373739e30d48819b"></a><!-- doxytag: member="matrix_booster.hpp::prueba_float" ref="271dc4e9712892b2373739e30d48819b" args="(int m, int n, int o, int p, int q, int r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prueba_float           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>r</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de float de los tamaños especificados por parámetro. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>m Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>n Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>o Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>p Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>q Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>r Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f79d216305d227ebb80b0e0212955a34"></a><!-- doxytag: member="matrix_booster.hpp::prueba_int" ref="f79d216305d227ebb80b0e0212955a34" args="(int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prueba_int           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de enteros de los tamaños especificados por parámetro. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>n Dimensión de las matrices cuadradas a multiplicar </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="780020279899dffc597344ca8c8ec20e"></a><!-- doxytag: member="matrix_booster.hpp::prueba_int" ref="780020279899dffc597344ca8c8ec20e" args="(int m, int n, int o, int p, int q, int r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prueba_int           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>r</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de enteros de los tamaños especificados por parámetro. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>m Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>n Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>o Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>p Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>q Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>r Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ada57697934df542cfa23540b1548efd"></a><!-- doxytag: member="matrix_booster.hpp::prueba_stdcomplex" ref="ada57697934df542cfa23540b1548efd" args="(int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prueba_stdcomplex           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de std::complex&lt;double&gt; de los tamaños especificados por parámetro. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>n Dimensión de las matrices cuadradas a multiplicar </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c99dee2733b2d31b71a78b5dcff4f5b3"></a><!-- doxytag: member="matrix_booster.hpp::prueba_stdcomplex" ref="c99dee2733b2d31b71a78b5dcff4f5b3" args="(int m, int n, int o, int p, int q, int r)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int prueba_stdcomplex           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>r</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Realiza la prueba de rendimiento de los diferentes algoritmos para el producto de matrices de std::complex&lt;double&gt; de los tamaños especificados por parámetro. 
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>m Nº de filas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>n Nº de columnas matriz A. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>o Nº de filas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>p Nº de columnas matriz B. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>q Nº de filas matriz C. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>int</em>&nbsp;</td><td>r Nº de columnas matriz C. </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c3fe40c07e1353c8546655a1623e8119"></a><!-- doxytag: member="matrix_booster.hpp::start_clock" ref="c3fe40c07e1353c8546655a1623e8119" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void start_clock           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Inicia la cuenta del reloj. 
+<p>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 29 22:44:32 2009 para matrix_booster por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>

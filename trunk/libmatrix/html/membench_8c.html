@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>matrix_booster: Referencia del Archivo membench.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia del Archivo membench.c</h1><code>#include &lt;stdio.h&gt;</code><br>
+<code>#include &lt;time.h&gt;</code><br>
+<code>#include &lt;limits.h&gt;</code><br>
+<code>#include &lt;sys/time.h&gt;</code><br>
+<code>#include &lt;sys/types.h&gt;</code><br>
+<code>#include &lt;math.h&gt;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Definiciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="membench_8c.html#fc597c76b4f04a2da506a240d51d89a0">SAMPLE</a>&nbsp;&nbsp;&nbsp;10</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="membench_8c.html#0611b9978dbe59d7aa75c5ee3f2e5256">CACHE_MIN</a>&nbsp;&nbsp;&nbsp;(1024)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="membench_8c.html#fec9a6b2892deafb8f1975cf1282dbbe">CACHE_MAX</a>&nbsp;&nbsp;&nbsp;(1024*1024*8)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="membench_8c.html#b018ad51ca4d68dcda15ee205489a648">TIME_DIF_TO_NS</a>(s, f)&nbsp;&nbsp;&nbsp;((f.tv_sec-s.tv_sec)*1000000.0 + (f.tv_usec-s.tv_usec))</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="membench_8c.html#fa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(a, b)&nbsp;&nbsp;&nbsp;(((a)&gt;(b))?(a):(b))</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="membench_8c.html#3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(a, b)&nbsp;&nbsp;&nbsp;(((a)&lt;(b))?(a):(b))</td></tr>
+
+<tr><td colspan="2"><br><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="membench_8c.html#e66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+
+<tr><td colspan="2"><br><h2>Variables</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="membench_8c.html#c9426a6536abee994e66805415396021">x</a> [CACHE_MAX]</td></tr>
+
+</table>
+<hr><h2>Documentación de las definiciones</h2>
+<a class="anchor" name="fec9a6b2892deafb8f1975cf1282dbbe"></a><!-- doxytag: member="membench.c::CACHE_MAX" ref="fec9a6b2892deafb8f1975cf1282dbbe" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CACHE_MAX&nbsp;&nbsp;&nbsp;(1024*1024*8)          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="0611b9978dbe59d7aa75c5ee3f2e5256"></a><!-- doxytag: member="membench.c::CACHE_MIN" ref="0611b9978dbe59d7aa75c5ee3f2e5256" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CACHE_MIN&nbsp;&nbsp;&nbsp;(1024)          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="fa99ec4acc4ecb2dc3c2d05da15d0e3f"></a><!-- doxytag: member="membench.c::MAX" ref="fa99ec4acc4ecb2dc3c2d05da15d0e3f" args="(a, b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX          </td>
+          <td>(</td>
+          <td class="paramtype">a,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">b&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;(((a)&gt;(b))?(a):(b))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="3acffbd305ee72dcd4593c0d8af64a4f"></a><!-- doxytag: member="membench.c::MIN" ref="3acffbd305ee72dcd4593c0d8af64a4f" args="(a, b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN          </td>
+          <td>(</td>
+          <td class="paramtype">a,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">b&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;(((a)&lt;(b))?(a):(b))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="fc597c76b4f04a2da506a240d51d89a0"></a><!-- doxytag: member="membench.c::SAMPLE" ref="fc597c76b4f04a2da506a240d51d89a0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAMPLE&nbsp;&nbsp;&nbsp;10          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="b018ad51ca4d68dcda15ee205489a648"></a><!-- doxytag: member="membench.c::TIME_DIF_TO_NS" ref="b018ad51ca4d68dcda15ee205489a648" args="(s, f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TIME_DIF_TO_NS          </td>
+          <td>(</td>
+          <td class="paramtype">s,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%">&nbsp;&nbsp;&nbsp;((f.tv_sec-s.tv_sec)*1000000.0 + (f.tv_usec-s.tv_usec))</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Documentación de las funciones</h2>
+<a class="anchor" name="e66f6b31b5ad750f1fe042a706a4e3d4"></a><!-- doxytag: member="membench.c::main" ref="e66f6b31b5ad750f1fe042a706a4e3d4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Documentación de las variables</h2>
+<a class="anchor" name="c9426a6536abee994e66805415396021"></a><!-- doxytag: member="membench.c::x" ref="c9426a6536abee994e66805415396021" args="[CACHE_MAX]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="membench_8c.html#c9426a6536abee994e66805415396021">x</a>[CACHE_MAX]          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generado el Sun Nov 29 22:44:32 2009 para matrix_booster por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>
