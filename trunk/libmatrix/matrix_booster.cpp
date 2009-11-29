@@ -114,11 +114,11 @@ int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc
   #pragma omp parallel
         {
         #pragma omp for
-             for( int i = 0; i < nfilasa; i += BLOCK_SIZE )
+             for( int i = 0; i < nfilasa; i+= BLOCK_SIZE )
              #pragma omp parallel for
-                  for( int j = 0; j < ncolumnasb; j += BLOCK_SIZE )
+                  for( int j = 0; j < ncolumnasb; j+= BLOCK_SIZE )
                   #pragma omp parallel for
-                       for( int k = 0; k < ncolumnasa; k += BLOCK_SIZE )
+                       for( int k = 0; k < ncolumnasa; k+= BLOCK_SIZE )
                             do_block( nfilasa,ncolumnasb, ncolumnasa, A, B, C, i, j, k );
         }
 }
@@ -212,11 +212,11 @@ int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc
   #pragma omp parallel
         {
         #pragma omp for
-             for( int i = 0; i < nfilasa; i += BLOCK_SIZE )
+             for( int i = 0; i < nfilasa; i+= BLOCK_SIZE )
              #pragma omp parallel for
-                  for( int j = 0; j < ncolumnasb; j += BLOCK_SIZE )
+                  for( int j = 0; j < ncolumnasb; j+= BLOCK_SIZE )
                   #pragma omp parallel for
-                       for( int k = 0; k < ncolumnasa; k += BLOCK_SIZE )
+                       for( int k = 0; k < ncolumnasa; k+= BLOCK_SIZE )
                             do_block( nfilasa,ncolumnasb, ncolumnasa, A, B, C, i, j, k );
         }
 }
@@ -318,7 +318,7 @@ int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc
                             do_block( nfilasa,ncolumnasb, ncolumnasa, A, B, C, i, j, k );
         }
 }
-int naive_multiplymatrix(Complex * A,Complex * B,Complex* C,
+int naive_multiplymatrixc(double * A,double * B,double* C,
 int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
 {
   if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
@@ -327,16 +327,125 @@ int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc
         return 1;
   }  
   for( int i = 0; i < nfilasa; i++ )
+       for( int j = 0; j < ncolumnasb*2; j=j+2 ) 
+       {
+          
+            double cij = C[i*ncolumnasb+j];
+            double cij2 = C[i*ncolumnasb+j+1];
+            for( int k = 0; k < ncolumnasa*2; k=k+2 )
+            {
+                 cij += A[i*ncolumnasa+k]*B[k*ncolumnasb+j] -A[i*ncolumnasa+k+1]* B[(k+1)*ncolumnasb+j];  
+                 cij2 += A[i*ncolumnasa+k]*B[(k+1)*ncolumnasb+j] + A[i*ncolumnasa+k+1] *B[k*ncolumnasb+j];              
+            }
+            C[i*ncolumnasb+j] = cij;
+            C[i*ncolumnasb+j+1] = cij2;
+       }
+  return 0;
+}
+int naive_multiplymatrix_openmpc( double*A,double *B, double * C,
+int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
+{
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  {
+        printf("Tamaños de matrices incompatibles para el producto naive omp\n");
+        return 1;
+  }  
+  #pragma omp parallel
+  {
+   #pragma omp for
+   for( int i = 0; i < nfilasa; i++ )
+       #pragma omp parallel for 
+       for( int j = 0; j < ncolumnasb; j++ ) 
+       {
+            double cij = C[i*ncolumnasb+j];
+            double cij2 = C[i*ncolumnasb+j+1];
+            for( int k = 0; k < ncolumnasa*2; k=k+2 )
+            {
+                 cij += A[i*ncolumnasa+k]*B[k*ncolumnasb+j] -A[i*ncolumnasa+k+1]* B[(k+1)*ncolumnasb+j];  
+                 cij2 += A[i*ncolumnasa+k]*B[(k+1)*ncolumnasb+j] + A[i*ncolumnasa+k+1] *B[k*ncolumnasb+j];              
+            }
+            C[i*ncolumnasb+j] = cij;
+            C[i*ncolumnasb+j+1] = cij2;
+       }
+  }
+}
+void basic_dgemmc( int nfilasa,int ncolumnasa,int ncolumnasb,int M, int N, int K,
+                  double *A, double *B, double *C )
+{
+  for( int i = 0; i < M; i++ )
+       for( int j = 0; j < N; j++ ) 
+       {
+            double cij = C[i*ncolumnasb+j];
+            double cij2 = C[i*ncolumnasb+j+1];
+            for( int k = 0; k < ncolumnasa*2; k=k+2 )
+            {
+                 cij += A[i*ncolumnasa+k]*B[k*ncolumnasb+j] -A[i*ncolumnasa+k+1]* B[(k+1)*ncolumnasb+j];  
+                 cij2 += A[i*ncolumnasa+k]*B[(k+1)*ncolumnasb+j] + A[i*ncolumnasa+k+1] *B[k*ncolumnasb+j];              
+            }
+            C[i*ncolumnasb+j] = cij;
+            C[i*ncolumnasb+j+1] = cij2;
+       }
+}
+
+void do_blockc( int nfilasa, int ncolumnasb,int ncolumnasa, double *A, double *B, double *C,
+               int i, int j, int k )
+{
+/*Calculamos las submatrices que componen los bloques para hacer los subproductos*/
+     int M = min( BLOCK_SIZE, nfilasa-i );
+     int N = min( BLOCK_SIZE, ncolumnasb-j );
+     int K = min( BLOCK_SIZE, ncolumnasa-k );
+
+     basic_dgemmc( nfilasa,ncolumnasa,ncolumnasb, M, N, K, A + i*ncolumnasa + k, B + k*ncolumnasb + j, C + i*ncolumnasb + j);
+}
+int blocked_multiplymatrixc(double * A,double* B, double  * C,
+int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
+{
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  {
+        printf("Tamaños de matrices incompatibles para el producto blocked\n");
+        return 1;
+  }      
+  for( int i = 0; i < nfilasa; i += BLOCK_SIZE )
+          for( int j = 0; j < ncolumnasb; j += BLOCK_SIZE )
+               for( int k = 0; k < ncolumnasa; k += BLOCK_SIZE )
+                    do_blockc( nfilasa,ncolumnasb,ncolumnasa, A, B, C, i, j, k );
+}
+int blocked_multiplymatrix_openmpc(double * A,double * B, double * C,
+int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
+{
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  {
+        printf("Tamaños de matrices incompatibles para el producto blocked omp\n");
+        return 1;
+  }  
+  #pragma omp parallel
+        {
+        #pragma omp for
+             for( int i = 0; i < nfilasa; i += BLOCK_SIZE )
+             #pragma omp parallel for
+                  for( int j = 0; j < ncolumnasb; j += BLOCK_SIZE )
+                  #pragma omp parallel for
+                       for( int k = 0; k < ncolumnasa; k += BLOCK_SIZE )
+                            do_blockc( nfilasa,ncolumnasb, ncolumnasa, A, B, C, i, j, k );
+        }
+}
+int naive_multiplymatrix( Complex *A,Complex * B, Complex * C,
+int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
+{
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  {
+        printf("Tamaños de matrices incompatibles para el producto naive omp\n");
+        return 1;
+  }  
+   for( int i = 0; i < nfilasa; i++ )
        for( int j = 0; j < ncolumnasb; j++ ) 
        {
             Complex cij = C[i*ncolumnasb+j];
             for( int k = 0; k < ncolumnasa; k++ )
-                 cij += A[i*ncolumnasa+k] * B[k*ncolumnasb+j];
+                 cij = cij+ A[i*ncolumnasa+k] * B[k*ncolumnasb+j];
             C[i*ncolumnasb+j] = cij;
        }
-  return 0;
 }
-
 
 int naive_multiplymatrix_openmp( Complex *A,Complex * B, Complex * C,
 int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
@@ -355,7 +464,7 @@ int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc
        {
             Complex cij = C[i*ncolumnasb+j];
             for( int k = 0; k < ncolumnasa; k++ )
-                 cij +=  A[i*ncolumnasa+k] * B[k*ncolumnasb+j];
+                 cij = cij+ A[i*ncolumnasa+k] * B[k*ncolumnasb+j];
             C[i*ncolumnasb+j] = cij;
        }
   }
@@ -368,7 +477,7 @@ void basic_dgemm( int nfilasa,int ncolumnasa,int ncolumnasb,int M, int N, int K,
        {
             Complex cij = C[i*ncolumnasb+j];
             for( int k = 0; k < K; k++ )
-                 cij += A[i*ncolumnasa+k] * B[k*ncolumnasb+j];
+                 cij = cij+A[i*ncolumnasa+k] * B[k*ncolumnasb+j];
             C[i*ncolumnasb+j] = cij;
        }
 }
@@ -397,6 +506,102 @@ int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc
                     do_block( nfilasa,ncolumnasb,ncolumnasa, A, B, C, i, j, k );
 }
 int blocked_multiplymatrix_openmp(Complex * A,Complex * B, Complex *C,
+int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
+{
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  {
+        printf("Tamaños de matrices incompatibles para el producto blocked omp\n");
+        return 1;
+  }  
+  #pragma omp parallel
+        {
+        #pragma omp for
+             for( int i = 0; i < nfilasa; i += BLOCK_SIZE )
+             #pragma omp parallel for
+                  for( int j = 0; j < ncolumnasb; j += BLOCK_SIZE )
+                  #pragma omp parallel for
+                       for( int k = 0; k < ncolumnasa; k += BLOCK_SIZE )
+                            do_block( nfilasa,ncolumnasb, ncolumnasa, A, B, C, i, j, k );
+        }
+}
+
+int naive_multiplymatrix( complex<double> *A,complex<double> * B, complex<double> * C,
+int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
+{
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  {
+        printf("Tamaños de matrices incompatibles para el producto naive omp\n");
+        return 1;
+  }  
+   for( int i = 0; i < nfilasa; i++ )
+       for( int j = 0; j < ncolumnasb; j++ ) 
+       {
+            complex<double> cij = C[i*ncolumnasb+j];
+            for( int k = 0; k < ncolumnasa; k++ )
+                 cij +=  A[i*ncolumnasa+k] * B[k*ncolumnasb+j];
+            C[i*ncolumnasb+j] = cij;
+       }
+}
+
+int naive_multiplymatrix_openmp( complex<double> *A,complex<double> * B, complex<double> * C,
+int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
+{
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  {
+        printf("Tamaños de matrices incompatibles para el producto naive omp\n");
+        return 1;
+  }  
+  #pragma omp parallel
+  {
+   #pragma omp for
+   for( int i = 0; i < nfilasa; i++ )
+       #pragma omp parallel for 
+       for( int j = 0; j < ncolumnasb; j++ ) 
+       {
+            complex<double> cij = C[i*ncolumnasb+j];
+            for( int k = 0; k < ncolumnasa; k++ )
+                 cij +=  A[i*ncolumnasa+k] * B[k*ncolumnasb+j];
+            C[i*ncolumnasb+j] = cij;
+       }
+  }
+}
+void basic_dgemm( int nfilasa,int ncolumnasa,int ncolumnasb,int M, int N, int K,
+                  complex<double> *A, complex<double> *B, complex<double> *C )
+{
+   for (int i = 0; i < M; i++ )
+       for( int j = 0; j < N; j++ ) 
+       {
+            complex<double> cij = C[i*ncolumnasb+j];
+            for( int k = 0; k < K; k++ )
+                 cij += A[i*ncolumnasa+k] * B[k*ncolumnasb+j];
+            C[i*ncolumnasb+j] = cij;
+       }
+}
+
+void do_block( int nfilasa, int ncolumnasb,int ncolumnasa, complex<double> *A, complex<double> *B, complex<double> *C,
+        int i, int j, int k )
+{
+/*Calculamos las submatrices que componen los bloques para hacer los subproductos*/
+     int M = min( BLOCK_SIZE, nfilasa-i );
+     int N = min( BLOCK_SIZE, ncolumnasb-j );
+     int K = min( BLOCK_SIZE, ncolumnasa-k );
+
+     basic_dgemm( nfilasa,ncolumnasa,ncolumnasb, M, N, K, A + i*ncolumnasa + k, B + k*ncolumnasb + j, C + i*ncolumnasb + j);
+}
+int blocked_multiplymatrix(complex<double> * A,complex<double> * B, complex<double>* C,
+int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
+{
+  if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
+  {
+        printf("Tamaños de matrices incompatibles para el producto blocked\n");
+        return 1;
+  }      
+  for( int i = 0; i < nfilasa; i += BLOCK_SIZE )
+          for( int j = 0; j < ncolumnasb; j += BLOCK_SIZE )
+               for( int k = 0; k < ncolumnasa; k += BLOCK_SIZE )
+                    do_block( nfilasa,ncolumnasb,ncolumnasa, A, B, C, i, j, k );
+}
+int blocked_multiplymatrix_openmp(complex<double> * A,complex<double> * B, complex<double> *C,
 int nfilasa,int ncolumnasa,int nfilasb,int ncolumnasb,int nfilasc,int ncolumnasc)
 {
   if (ncolumnasa!=nfilasb || nfilasa!=nfilasc || ncolumnasb!=ncolumnasc)
@@ -563,7 +768,6 @@ int prueba_Complex(int m,int n,int o,int p,int q,int r)
     fill(B,o,p);
     fill(C,q,r);
     double tiempo;
-    
     start_clock();
     for (int j=0;j<1;j++)
     {
@@ -571,6 +775,7 @@ int prueba_Complex(int m,int n,int o,int p,int q,int r)
     }
     tiempo=end_clock();
     printf ("Complex Naive Tamaños %d %d %d %d %d %d Tiempo %lf Mflops %lf\n",m,n,o,p,q,r,tiempo,m*p*n*2e-6/tiempo);
+    
     start_clock();
     for (int j=0;j<1;j++)
     {
@@ -597,6 +802,52 @@ int prueba_Complex(int m,int n,int o,int p,int q,int r)
     free(C);
     return 0;
 }
+int prueba_stdcomplex(int m,int n,int o,int p,int q,int r)
+{
+        complex<double> *A;
+    complex<double> *B;
+    complex<double> *C;
+    A=crea_matrix(A,m,n*2);
+    B=crea_matrix(B,o*2,p);
+    C=crea_matrix(C,q,r*2);
+    fill(A,m,n);
+    fill(B,o,p);
+    fill(C,q,r);
+    double tiempo;
+    
+    start_clock();
+    for (int j=0;j<1;j++)
+    {
+        naive_multiplymatrix(A,B,C,m,n,o,p,q,r);
+    }
+    tiempo=end_clock();
+    printf ("StdComplex Naive Tamaños %d %d %d %d %d %d Tiempo %lf Mflops %lf\n",m,n,o,p,q,r,tiempo,m*p*n*2e-6/tiempo);
+    start_clock();
+    for (int j=0;j<1;j++)
+    {
+        naive_multiplymatrix_openmp (A,B,C,m,n,o,p,q,r);
+    }
+    tiempo=end_clock();
+    printf ("StdComplex NaiveOmp Tamaños %d %d %d %d %d %d Tiempo %lf Mflops %lf\n",m,n,o,p,q,r,tiempo,m*p*n*2e-6/tiempo);
+    start_clock();
+    for (int j=0;j<1;j++)
+    {
+        blocked_multiplymatrix(A,B,C,m,n,o,p,q,r);
+    }
+    tiempo=end_clock();
+    printf ("StdComplex Blocked Tamaños %d %d %d %d %d %d Tiempo %lf Mflops %lf\n",m,n,o,p,q,r,tiempo,m*p*n*2e-6/tiempo);
+    start_clock();
+    for (int j=0;j<1;j++)
+    {
+        blocked_multiplymatrix_openmp(A,B,C,m,n,o,p,q,r);
+    }
+    tiempo=end_clock();
+    printf ("StdComplex BlockedOmp Tamaños %d %d %d %d %d %d Tiempo %lf Mflops %lf\n",m,n,o,p,q,r,tiempo,m*p*n*2e-6/tiempo);
+    
+    free(A);
+    free(B);
+    free(C);
+}
 int prueba_int(int n)
 {
     prueba_int(n,n,n,n,n,n);
@@ -612,4 +863,8 @@ int prueba_double(int n)
 int prueba_Complex(int n)
 {
     prueba_Complex(n,n,n,n,n,n); 
+}
+int prueba_stdcomplex(int n)
+{
+    prueba_stdcomplex(n,n,n,n,n,n);    
 }

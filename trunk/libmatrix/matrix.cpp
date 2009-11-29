@@ -20,6 +20,7 @@
 #include "matrix.hpp"
 #include <stdlib.h>
 #include <stdio.h>
+
 void fill (int * m,int nfilas,int ncolumnas)
 {
 	for( int i = 0; i < nfilas*ncolumnas; i++ )
@@ -60,6 +61,17 @@ void fill (Complex * m,int n)
 	for( int i = 0; i < n*n; i++ )
         m[i] = Complex(2 * drand48( ) - 1,2 * drand48( ) - 1);
 }
+void fill (complex<double> * m,int n)
+{
+	for( int i = 0; i < n*n; i++ )
+        m[i] = complex<double>(2 * drand48( ) - 1,2 * drand48( ) - 1);
+}
+void fill (complex<double> * m,int nfilas,int ncolumnas)
+{
+	for( int i = 0; i < nfilas*ncolumnas; i++ )
+        m[i] = complex<double>(2 * drand48( ) - 1,2 * drand48( ) - 1);
+}
+
 int * crea_matrix(int * m,int n)
 {
 	m=(int *)malloc(sizeof(int)*n*n);
@@ -100,6 +112,17 @@ Complex * crea_matrix(Complex * m,int a,int b)
 	m=(Complex *)malloc(sizeof(Complex)*a*b);
 	return m;
 }
+complex<double>  * crea_matrix(complex<double>  * m,int n)
+{
+	m=(complex<double> *)malloc(sizeof(complex<double>)*n*n);
+	return m;
+}
+complex<double>  * crea_matrix(complex<double>  * m,int a,int b)
+{
+	m=(complex<double> *)malloc(sizeof(complex<double>)*a*b);
+	return m;
+}
+
 
 
 
